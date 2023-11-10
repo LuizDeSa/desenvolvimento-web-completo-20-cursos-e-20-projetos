@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>OO :: Objeto Literal</title>
+    </head>
+    <body>
+        <h1>OO :: Objeto Literal</h1>
+        <hr>
+
+        <script>
+
+            // Notação ES6
+            class Produto{
+                constructor(descricao, preco){
+                    this.descricao = descricao
+                    this.preco = preco
+                }
+
+                verDescricao(){
+                    console.log(`${this.descricao} :: ${this.preco} R$`)
+                }
+            }
+
+            let cafe = new Produto('Café', 16.99)
+            cafe.verDescricao()
+
+            // ----------------------------------------------
+            // Notação Objeto Literal
+            // Muito utilizado qunado não necessitamos criar uma coleção de objetos da mesma classe. Ex:
+                // formulário -> servidor
+                    // recupera o dado e monta um objeto literal
+                        // objeto literal> JSON> HTTP> server > armazenar
+
+
+            produtoObjetoLiteral = {
+                // Chave/Atributo: valor
+                descricao: 'Café',
+                preco: 16.99,
+                verDescricao: function(){
+                    // O this ajusta o contexto ao objeto. Se não tivesse o this, o contexto seria a função
+                    console.log(`${this.descricao} :: ${this.preco} R$`)
+                }
+            } 
+
+            produtoObjetoLiteral.verDescricao()
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>OO :: Funções Factory</title>
+    </head>
+    <body>
+        <h1>OO :: Funções Factory</h1>
+        <hr>
+
+        <script>
+            let bicicleta1 = {
+                cor: 'branca',
+                marcha:'única',
+                aro: 24,
+                pedalar(){console.log('Método pedalar executado')}
+            }
+            let bicicleta2 = {
+                cor: 'vermelha',
+                marcha:'21',
+                aro: 26,
+                pedalar(){console.log('Método pedalar executado')}
+            }
+
+            console.log(bicicleta1)
+            console.log(bicicleta2)
+
+
+            // ------------------------------------------------------------------------
+
+            let BicicletaFactory = function(cor, marcha, aro){
+                // logica
+                // requisição http
+                // resposta http
+                return {
+                    cor,
+                    marcha,
+                    aro,
+                    pedalar(){console.log('Método pedalar executado')}
+                }
+            }
+
+            let bicicleta3 = BicicletaFactory('Preta', '24', 26)
+            let bicicleta4 = BicicletaFactory('Azul', '18', 26)
+            console.log(bicicleta3)
+            console.log(bicicleta4)
+            
+        </script>
+    </body>
+</html>

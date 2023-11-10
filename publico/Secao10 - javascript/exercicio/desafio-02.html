@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio 2</title>
+        <script>
+            var idade = prompt('Informe sua idade: ')
+            var msg = null
+
+            idade = parseInt(idade)
+
+            if(idade>=0 && idade<15){
+                msg = "Criança"
+            }else if(idade>=15 && idade<30){
+                msg = "Jovem"
+            } else if(idade>=30 && idade<60){
+                msg = "Adulto"
+            } else if(idade>=60){
+                msg = "Idoso"
+            }else{
+                msg = "Sem opções."
+            }
+
+
+            alert(msg)
+        </script>
+    </head>
+    <body>
+        <h1>Desafio de fixação 02</h1>
+    </body>
+</html>

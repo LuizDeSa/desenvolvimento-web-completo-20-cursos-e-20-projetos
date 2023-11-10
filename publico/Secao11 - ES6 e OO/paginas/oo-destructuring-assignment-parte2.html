@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Destructuring-Assignment</title>
+    </head>
+    <body>
+        <h1>Destructuring-Assignment parte 2</h1>
+        <hr>
+        <script>
+            let produto = {
+                descricao: 'Notebook',
+                preco: 1800,
+                // produto tem um detalhes
+                detalhes: { // é outro objeto
+                    fabricante: 'abc',
+                    modelo: 'xyz'
+                }
+            }
+
+            console.log(produto)
+
+            let {descricao, preco} = produto
+            console.log(descricao, preco)
+
+
+            let {descricao:d, preco:p} = produto
+            console.log(d, p)
+
+            // let {descricao:d1, preco:p1, desconto} = produto
+            let {descricao:d1, preco:p1 = 1000, desconto = 5} = produto
+            console.log(d, p, desconto)
+
+
+            let{detalhes: {fabricante, modelo}} = produto
+            console.log(fabricante, modelo)
+            let{detalhes: {fabricante:f, modelo:m = 'Modelo não informado'}} = produto
+            console.log(f, m)
+
+        </script>            
+    </body>
+</html>

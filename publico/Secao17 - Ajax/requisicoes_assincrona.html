@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/bootstrap5/css/bootstrap.css" rel="stylesheet">
+        <title>Requisições assincronas</title>
+
+        <script>
+
+            /*Status!=estado(State)*/
+
+            function requisitarPagina(url){
+
+                document.getElementById('conteudo').innerHTML = ''
+
+                // incluir o gif de loading na página
+                if(!document.getElementById('loading')){
+                    let imgLoading = document.createElement('img')
+                    imgLoading.id="loading"
+                    imgLoading.src = 'img/loading.gif';
+                    imgLoading.className = 'rounded mx-auto d-block'
+
+                    document.getElementById('conteudo').appendChild(imgLoading)
+                }
+
+                let ajax = new XMLHttpRequest();
+
+                // requisição não iniciada, state = 0
+                // console.log(ajax.readyState)
+
+                // Iniciando conexão com algum servidor, state=1
+                ajax.open('GET', url)
+                // console.log(ajax.readyState)
+
+                // Ovindo as mudanças de estados que acontecem no servidor => state = 2, 3, 4
+                ajax.onreadystatechange = ()=>{
+                    if(ajax.readyState==4 && ajax.status==200){
+                        // console.log('requisição finalizada com sucesso')
+                        // document.getElementById('loading').remove()
+                        document.getElementById('conteudo').innerHTML = ajax.responseText
+
+                    }else if(ajax.readyState==4 && ajax.status==404){
+                        // console.log('requisição finalizada, recurso não encontrado')
+                        // document.getElementById('loading').remove()
+                        document.getElementById('conteudo').innerHTML = '<p>Falha no sistema! Temte novamente mais tarde ...</p>'
+                    }
+                }
+
+                ajax.send()
+
+                // console.log(ajax);
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm bg-light px-3">
+                <div class="container">
+                    <div class="navbar-brand mb-0 h1">
+                        <h3 class="display-6">Requisições síncronas e assíncronas</h3>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 text-center">
+                    <a href="#" class="btn btn-primary me-2" onclick="requisitarPagina('pagina_1_conteudo.html')">Página 1</a>
+	    			<a href="#" class="btn btn-primary me-2" onclick="requisitarPagina('pagina_2_conteudo.html')">Página 2</a>
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_3_conteudo.html')">Página 3</a>
+                </div>
+                <div class="col-md-4"></div>                
+            </div>
+
+            <div class="row mb-2">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" id="conteudo">
+                    
+                </div>
+                <div class="col-md-1"></div>                
+            </div>
+        </div>
+    </body>
+</html>

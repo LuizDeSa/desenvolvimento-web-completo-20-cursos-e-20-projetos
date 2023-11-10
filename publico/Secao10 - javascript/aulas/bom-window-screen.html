@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>BOM ::: Window  Screen</title>
+        
+    </head>
+    <body>
+        <h1>BOM ::: Window Screen</h1>
+        <p>Muito utilizado para verificar os tamanho da tela</p>
+        <p>São valores <strong>POTENCIAIS</strong> - OU SEJA o tanto que o navegador pode expandir</p>
+        <hr>
+
+        <script>
+            var alturaSemBarras = window.screen.availHeight
+            var larguraSemBarras = window.screen.availWidth
+            var alturaTotal = screen.height
+            var larguraTotal = screen.width
+            
+
+            document.write('<p> A altura sem as barras do navegador é: '+alturaSemBarras+'</p>')
+            document.write('<p> A largura sem as barras do navegador é: '+larguraSemBarras+'</p>')
+            document.write('<p> A altura total do navegador é: '+alturaTotal+'</p>')
+            document.write('<p> A largura total do navegador é: '+larguraTotal+'</p>')
+
+
+            if(larguraTotal<500){
+                document.write('Lógica para impressão do menu mobile')
+            }else{
+                document.write('Lógica para impressão do menu web')
+
+            }
+        </script>
+    </body>
+</html>

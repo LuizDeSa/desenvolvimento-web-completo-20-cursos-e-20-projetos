@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Funções</title>
+        <script>
+            // as funções não precisam ser declaradas antes de serem chamadas pois o intrepretador 
+            // procura primeiro as funções para aloca-las na memória e depois  executa o script em si
+            
+            /*
+            function calcularAreaTerreno(largura, comprimento){
+                var area = largura*comprimento
+                return area
+            }
+
+            var largura = prompt('Digite a largura: ')
+            var comprimento = prompt('Digite a comprimento: ')
+            var area = calcularAreaTerreno(largura, comprimento)
+            alert('O terreno possui ' + area + ' metros quadrados')
+
+            */
+
+            function soma (a, b){
+                return a+b
+            }
+
+            //flexbilidade dos parametros
+            console.log(soma(7, 5))
+            console.log(soma(7, 5, 9, 15))// desconsidera os parametros addcionais
+            console.log(soma(7))// returna not a number
+            console.log(soma())// returna not a number
+
+            console.log('')
+
+            function soma2 (){
+                console.log(arguments)
+                var resutado = 0
+                for(var i in arguments){
+                    resutado += arguments[i]
+                }
+
+                return resutado
+            }
+
+            console.log(soma2(7, 5, 3.2))
+            console.log(soma2(7, 5, 3.2, 'texto'))
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Funções</h1>
+        <hr>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../css/bootstrap5/css/bootstrap.css" rel="stylesheet">
+        <title>App Pesquisa endereço</title>
+
+        <!-- <script src="xmltojson.js"></script> -->
+
+        <script>
+            function validaCEP(cep){
+                if(cep){
+                    return true;
+                }
+                return false;
+            }
+
+            function getDadosEnderecoPorCep(cep){
+                if(validaCEP(cep)){
+                    let url = 'https://viacep.com.br/ws/'+cep+'/json/'
+
+                    let xmlHttp = new XMLHttpRequest();
+                    xmlHttp.open('GET', url)
+
+                    xmlHttp.onreadystatechange = () => {
+                        if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+                            let dadosJSONText = xmlHttp.responseText
+                            let dadosJSONObj = JSON.parse(dadosJSONText)
+
+                            document.getElementById('endereco').value = dadosJSONObj.logradouro
+                            document.getElementById('bairro').value = dadosJSONObj.bairro
+                            document.getElementById('cidade').value = dadosJSONObj.localidade
+                            document.getElementById('uf').value = dadosJSONObj.uf
+                            
+
+                        }else{
+                            console.log(xmlHttp.responseText)
+                        }
+                    }
+
+                    xmlHttp.send()
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-light px-3">
+            <div class="container">
+                <div class="navbar-brand mb-0 h1">
+                    <h3 class="display-6">App Pesquisa endereço</h3>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mt-2">
+            <div class="row mb-3">
+                <div class="col-sm-3">
+					<input id="cep" type="text" class="form-control" placeholder="CEP" onblur="getDadosEnderecoPorCep(this.value)"/>
+				</div>
+				<div class="col-sm-9">
+					<input id="endereco" type="text" class="form-control" placeholder="Endereço" readonly />
+				</div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-sm-6">
+					<input id="bairro" type="text" class="form-control" placeholder="Bairro" readonly />
+				</div>
+				<div class="col-sm-4">
+					<input id="cidade" type="text" class="form-control" placeholder="Cidade" readonly />
+				</div>
+
+				<div class="col-sm-2">
+					<input id="uf" type="text" class="form-control" placeholder="UF" readonly />
+				</div>
+            </div>
+        </div>
+
+    </body>
+</html>

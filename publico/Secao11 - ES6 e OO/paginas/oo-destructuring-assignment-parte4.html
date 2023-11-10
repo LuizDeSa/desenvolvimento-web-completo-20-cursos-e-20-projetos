@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Destructuring-Assignment</title>
+    </head>
+    <body>
+        <h1>Destructuring-Assignment parte 4</h1>
+        <hr>
+        <script>
+            let arr = [10, 20, 30, 40]
+
+           let [x, ...resto] = arr
+        
+           console.log(x)
+
+           console.log(resto)
+
+
+           let obj = {
+                a: 10,
+                b: 20,
+                c: 30,
+                d:40
+            }
+
+            let {a, ...z} = obj
+
+            console.log(a)
+            console.log(z)
+        </script>            
+    </body>
+</html>

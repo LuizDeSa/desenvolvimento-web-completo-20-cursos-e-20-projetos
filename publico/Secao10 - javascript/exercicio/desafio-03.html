@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio 3</title>
+        <script>
+            var nome = prompt('Digite seu nome: ')
+            var altura = prompt('Informe sua atura em centimetros: ')
+            var peso = prompt('Informe seu peso: ')
+
+            altura = parseFloat(altura)
+            peso = parseFloat(peso)
+
+            altura /= 100
+
+            var imc = peso/(altura*altura)
+
+            var classificacao = null
+
+            if(imc<16){
+                classificacao = 'baixo peso muito grave'
+            } else if(imc>=16 && imc<17){
+                classificacao = 'baixo peso grave'
+            } else if(imc>=17 && imc<18.5){
+                classificacao = 'baixo peso'
+            } else if(imc>=18.5 && imc<25){
+                classificacao = 'peso normal'
+            } else if(imc>=25 && imc<30){
+                classificacao = 'sobrepeso'
+            } else if(imc>=30 && imc<35){
+                classificacao = 'obesidade grau I'
+            } else if(imc>=35 && imc<40){
+                classificacao = 'obesidade grau II'
+            } else if(imc>=40){
+                classificacao = 'obesidade grau III'
+            }
+
+            alert(nome +' possui índice de massa corporal igual a '+ imc.toFixed(2) + ' sendo classificado como: ' + classificacao)
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Desafio de fixação 03</h1>
+    </body>
+</html>

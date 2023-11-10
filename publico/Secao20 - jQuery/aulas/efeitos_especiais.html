@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery - Efeitos especiais</title>
+        <style>
+            button {
+				margin-bottom: 5px;
+				width: 100px;
+			}
+
+			.div {
+				width: 100px;
+				height: 100px;
+			}
+
+			.div1 {
+				background-color: red
+			}
+
+			.div2 {
+				background-color: green
+			}
+
+			.div3 {
+				background-color: blue
+			}
+
+			.grupo {
+				padding: 25px;
+				float: left
+			}
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(() => {
+				
+                /*
+                    se passar string -> slow, medio, fast
+
+                    se passar numero -> milisegundos
+                */
+                // $('#div1').hide()
+                // $('#div1').hide('slow')
+                // $('#div1').hide(2000)
+
+                // $('#div1').show()
+                // $('#div1').show('slow')
+                // $('#div1').show(2000)
+
+                // $('#div1').toggle(2000)
+                // $('#div1').toggle('slow')
+
+                // opacidade
+                // $('#div2').fadeOut('slow')
+                // $('#div2').fadeIn('slow')
+                // $('#div2').fadeToggle('slow')
+                // $('#div2').fadeTo('slow', 0.3)
+
+
+                // $('#div3').slideUp('slow')
+                // $('#div3').slideDown('slow')
+                // $('#div3').slideToggle('slow')
+
+
+
+                $('#btn1').on('click', ()=>{
+                    $('#div1').toggle('slow')
+                })
+
+                $('#btn2').on('click', ()=>{
+                    $('#div2').fadeToggle('slow')
+                })
+
+                $('#btn3').on('click', ()=>{
+                    $('#div3').slideToggle('slow')
+                })
+
+
+				
+			})
+        </script>
+
+    </head>
+    <body>
+        <h1>Efeitos especiais</h1>
+
+        <div class="grupo">
+			<button id="btn1" type="button">DIV 1</button>
+			<div id="div1" class="div div1"></div>
+		</div>
+
+		<div class="grupo">
+			<button id="btn2" type="button">DIV 2</button>
+			<div id="div2" class="div div2"></div>
+		</div>
+
+		<div class="grupo">
+			<button id="btn3" type="button">DIV 3</button>
+			<div id="div3" class="div div3"></div>
+		</div>
+    </body>
+    
+</html>

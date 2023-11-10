@@ -1,0 +1,5 @@
+1#Chamado ADM#Criação Usuário#Solicito a criação de usuário
+2#Chamado USER#Impressora#Troca de toner
+4#Chamado Maria#Hardware#Pc não liga
+3#Chamado JOSE#Software#Instalação de software
+1#Impressora não imprime#Rede#Estou sem internet

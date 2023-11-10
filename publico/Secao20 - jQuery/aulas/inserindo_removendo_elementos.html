@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery - Inserindo e removendo elementos html</title>
+        <!-- <script src="jquery-3.7.1.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(()=>{
+
+                // Anexo
+                $('#lista1').append('<li>append</li>')
+                $('#lista1').prepend('<li>prepend</li>')
+                $('#lista2').prepend('<div>prepend</div>')
+                $('#lista2').after('<p>after</p>')
+                $('#lista2').before('<p>before</p>')
+
+                // Substitui conteudo interno
+                $('#lista3').html('<p>html</p>')
+
+
+                // Remover
+
+                $('#linha').remove()
+
+
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Inserindo e removendo elementos html</h1>
+
+        <ul id="lista1">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <div id="lista2">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+        </div>
+
+        <div id="lista3">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+        </div>
+
+        <hr id="linha">
+
+        <hr>
+       
+    </body>
+    
+</html>

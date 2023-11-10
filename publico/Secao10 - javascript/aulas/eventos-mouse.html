@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos Mouse</title>
+        <script>
+            function acao1(){
+                alert('Evento disparado')
+            }
+
+            function acao2(){
+                alert('Duplo Click')
+            }
+
+            function acao3(){
+                alert('On Mouse up')
+            }
+
+            function acao4(){
+                alert('On Mouse down')
+            }
+
+            function acao5(){
+                alert('On Mouse over')
+            }
+
+            function acao6(){
+                alert('On Mouse Out')
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Eventos Mouse</h1>
+        <hr>
+
+        Nem todo elemento tem todos os eventos
+
+        <hr>
+        <div onclick="alert('teste')" style="background: #ccc; height: 150px; width: 150px; margin-bottom: 20px;">Click Simples</div>
+
+        <div onclick="acao1()" style="background: #ccc; height: 150px; width: 150px; margin-bottom: 20px;">Click Simples</div>
+
+        <div ondblclick="acao2()" style="background: #ccc; height: 150px; width: 150px; margin-bottom: 20px;">Click duplo</div>
+
+        <div onmouseup="acao3()" style="background: #ccc; height: 150px; width: 150px; margin-bottom: 20px;">Mouse up</div>
+        
+        <div onmousedown="acao4()" style="background: #ccc; height: 150px; width: 150px; margin-bottom: 20px;">Mouse down</div>
+
+        <div onmouseover="acao5()" style="background: #ccc; height: 150px; width: 150px; margin-bottom: 20px;">Mouse Over</div>
+
+        <div onmouseout="acao6()" style="background: #ccc; height: 150px; width: 150px; margin-bottom: 20px;">Mouse Out</div>
+
+        <div onclick="acao1()" onmouseout="acao6()" style="background: #ccc; height: 150px; width: 150px; margin-bottom: 20px;">Mouse Out</div>
+
+    </body>
+</html>

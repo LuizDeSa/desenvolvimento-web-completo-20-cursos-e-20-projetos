@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>OO :: Objeto Literal</title>
+    </head>
+    <body>
+        <h1>OO :: Objeto Literal Melhorias</h1>
+        <hr>
+
+        <script>
+            let nome = 'Luiz'//document.getElementById
+            let idade = 26
+            let sexo = 'Masculino'
+            let profissao = 'Técnico de TI'
+
+            // Notação antiga
+            let objeto1 = {
+                nome: nome,
+                idade: idade,
+                sexo: sexo,
+                profissao: profissao,
+                exibirResumo: function(){
+                    console.log(`${this.nome}, ${this.idade} anos, sexo ${this.sexo}, ${this.profissao}`)
+                }
+            }
+            console.log(objeto1)
+            objeto1.exibirResumo()
+
+            // Quando temos a chave com o mesmo nome da outra variável onde está os valores
+            // É possivel misturar
+            let objeto2 = {
+                nome, // nome = nome variável / valor = valor da variável
+                idade,
+                sexo,
+                profissao,
+                exibirResumo(){
+                    console.log(`${this.nome}, ${this.idade} anos, sexo ${this.sexo}, ${this.profissao}`)
+                }
+            }
+            console.log(objeto2)
+            objeto2.exibirResumo()
+
+
+
+            
+        </script>
+    </body>
+</html>

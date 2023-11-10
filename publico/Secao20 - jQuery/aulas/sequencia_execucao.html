@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery - Sequencia de execução</title>
+        <!-- <script src="jquery-3.7.1.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>JQuery - Sequencia de execução</h1>
+
+        <script>
+            // Só executa quando o documento estiver carregado
+            // Primeira maneira
+                // $(document).ready(function(){
+                //     function teste(){
+                //         console.log($('#exemplo1'))
+                //     }
+
+                //     teste()
+                // })
+
+            // Segunda forma
+                // function teste(){
+                //     console.log($('#exemplo1'))
+                // }
+
+                // $(teste)
+            
+        </script>
+
+        <div id="exemplo1">Teste</div>
+       
+    </body>
+</html>

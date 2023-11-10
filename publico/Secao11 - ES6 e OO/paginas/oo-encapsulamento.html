@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>OO :: Pilar do Encapsulamento</title>
+    </head>
+    <body>
+        <h1>OO :: Pilar do Encapsulamento</h1>
+        <hr>
+
+        <script>
+
+            // exemplo 01
+            class SalarioLiquido{
+                constructor(nome, salario){
+                    this.nome = nome;
+                    this.salario = salario;
+                }
+
+                // Atributo privado
+                #porcentagemImposto = 0.20;
+
+                // Metodo privado
+                #calcularImposto(){
+                    return this.salario*this.#porcentagemImposto;
+                }
+
+                obterSalarioLiquido(){
+                    return this.salario - this.#calcularImposto();
+                }
+
+                get porcentagemImposto(){
+                    return this.#porcentagemImposto
+                }
+
+                set porcentagemImposto(x){
+                    if(x>0.0 && x<1){
+                        this.#porcentagemImposto = x
+                    }
+                }
+            }
+
+            salario1 = new SalarioLiquido('Luiz', 2000)
+
+            console.log(salario1.porcentagemImposto)
+
+            salario1.porcentagemImposto =0.3
+
+            console.log(salario1.porcentagemImposto)
+
+
+            console.log(salario1.obterSalarioLiquido())
+
+            // exemplo 02
+
+            
+
+        </script>
+    </body>
+</html>

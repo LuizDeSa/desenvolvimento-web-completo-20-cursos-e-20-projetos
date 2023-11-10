@@ -1,0 +1,80 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS - Div - Sapn</title>
+
+        <style type="text/css">
+            #topo{
+                background: blue;
+            }
+
+            #conteudo{
+                background: red;
+            }
+
+            #rodape{
+                background: green;
+            }
+
+            #assinatura{
+                background: pink;
+            }
+
+            .produto{
+                background: gray;
+                margin: 10px;
+            }
+
+            .azul{
+                color: blue;
+            }
+        </style>
+
+    </head>
+    <body>       
+
+        <!-- Div é um elemento do tipo block pois oculpa todo o espaço em sua volta -> coloca um elemento abaixo do outro -->
+        <!-- Span é do tipo inline -> coloca uma linha na frente da outra -->
+
+        <div id="topo">
+            <img src="imagens/amazon.png" alt="" width="200">
+            <ul>
+                <li> <a href="../index.html">Home</a> </li>
+                <li>Produtos</li>
+                <li>Contatos</li>
+            </ul>
+        </div>
+
+        <div id="conteudo">
+            <div class="produto">
+                Produto 1
+            </div>
+            <div class="produto">
+                Produto 2
+            </div>
+            <div class="produto">
+                Produto 3
+            </div>
+        </div>
+
+        <div id="rodape">
+            &copy; Todos os <span class="azul">direitos reservados</span>
+        </div>
+    
+        <!-- span -> bassicamente funciona como uma div -->
+        <span id="assinatura">
+            Luiz
+        </span>
+        <span id="">
+            Alberto
+        </span>
+
+        <div id="assinatura">
+            Luiz
+        </div>
+        <span id="">
+            Alberto
+        </span>
+    </body>
+ </html>

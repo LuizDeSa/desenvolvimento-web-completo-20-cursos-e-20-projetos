@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>BOM ::: Window</title>
+        <script>
+            var janela
+            function abrirPopUp(){
+                janela =  window.open('', 'nova_janela', 'width=400, height=200')
+            }
+
+            function fecharPopUp(){
+                console.log('Chegou')
+                janela.close()
+            }
+        </script>
+    </head>
+    <body>
+        <h1>BOM ::: Window</h1>
+        <hr>
+        <p>O window é parte do navegador onde são renderizados os eklementos html</p>
+        <p>Dentro do window, temos o dom</p>
+        <p>Com o DOM interagimos com os elementos html, com o BOM interagimos com os lementos do navegador</p>
+        <hr>
+        <button onclick="abrirPopUp()">Abrir Janela</button>
+        <button onclick="fecharPopUp()">Fechar Janela</button>
+        <button onclick="window.print()">Imprimir</button>
+
+    </body>
+</html>

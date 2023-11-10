@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>OO :: Pilar da Heranca</title>
+    </head>
+    <body>
+        <h1>OO :: Pilar da Heranca</h1>
+        <hr>
+
+        <script>
+
+            class Aninal{
+                constructor(){
+                    this.cor = ''
+                    this.tamanho = null
+                    this.peso = null
+                }
+
+                dormir(){
+                    console.log('Dormindo')
+                }
+            }
+
+            class Cachorro extends Aninal{
+                constructor(){                    
+                    super()
+                    this.orelha = 'Grandes e Caídas'
+                }
+
+                correr(){
+                    console.log('Correndo')
+                }
+
+                rosnar(){
+                    console.log('Rosnar')
+                }
+            }
+
+            class Passaro extends Aninal{
+                constructor(){                    
+                    super()
+                    this.bico = 'Curto'
+                }
+
+                voar(){
+                    console.log('Voando')
+                }               
+            }
+
+            class Papagaio extends Passaro{
+                constructor(){
+                    super()
+                    this.sabeFalar = true
+                }
+
+                falar(){
+                    console.log('falar')
+                }
+            }
+
+            let cachorro = new Cachorro()
+            console.log(cachorro)
+            cachorro.dormir()
+
+            let passaro = new Passaro()
+            console.log(passaro)
+            passaro.dormir()
+
+            let papagaio = new Papagaio()
+            console.log(papagaio)
+            papagaio.voar()
+            papagaio.dormir()
+            papagaio.falar()
+
+        </script>
+    </body>
+</html>

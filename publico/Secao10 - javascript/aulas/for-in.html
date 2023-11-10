@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>For in</title>
+    </head>
+    <body>
+        <h1>For in</h1>
+        <hr>
+
+        <script>
+            // var listaCondidados = ['Luiz', 'Alberto', 'José', 'Ana', 'Maria']
+            
+            var listaConvidados = Array()
+
+            listaConvidados['a'] = 'Luiz'
+            listaConvidados[10] = 'Alberto'
+            listaConvidados['Zebra'] = 'José'
+            listaConvidados[-1] = 'Ana'
+            listaConvidados[true] = 'Carlos'
+
+            console.log(listaConvidados)
+
+            // Muito utilizado para indices não sequênciais
+            for(var x in listaConvidados){
+                console.log(x+' ::: '+listaConvidados[x])
+            }
+
+
+        </script>
+    </body>
+</html>

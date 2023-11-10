@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Arrow Function</title>
+        
+    </head>
+    <body>
+        <h1>Arrow Function</h1>
+        <hr>
+        <script>
+
+            let quadrado = function(x=0){
+                return x * x
+            }
+            
+
+            // arrow(flecha) function
+            let quadrado2 = (x = 0) => {
+                return x*x
+            }
+
+            // se for so um parametro
+            let quadrado3 = x => {
+                return x*x
+            }
+
+            // Como a lógica interna é muito simples não presisa de return
+            let quadrado4 = x => x*x // return implicito
+
+            document.write(quadrado(1))
+            document.write('<br><br>')
+            document.write(quadrado2(2))
+            document.write('<br><br>')
+            document.write(quadrado3(3))
+            document.write('<br><br>')
+            document.write(quadrado4(4))
+            document.write('<br><br>')
+
+
+            let parOuImpar = function(numero){
+                if(numero % 2 ===0 ){
+                    return('Par')
+                }else{
+                    return('Impar')
+                }
+            }
+
+            let parOuImpar2 = numero => numero%2===0?'Par':'Impar'
+
+            document.write(parOuImpar(2))
+            document.write('<br><br>')
+            document.write(parOuImpar(3))
+            document.write('<br><br>')
+            document.write('<br><br>')
+            document.write('<br><br>')
+
+            
+            document.write(parOuImpar2(3))
+            document.write('<br><br>')
+            document.write(parOuImpar2(4))
+            document.write('<br><br>')
+
+        </script>
+    </body>
+</html>

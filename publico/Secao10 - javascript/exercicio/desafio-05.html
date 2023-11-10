@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM</title>
+
+        <style>
+            #nome_usuario{
+                width: 300px;
+                height: 34px;
+                border: 2px solid #000;
+                border-radius: 10px;
+                padding: 5px 15px;
+                font-size: 20px;
+            }
+
+            .backgraund-input-original{
+                background-color: #f7f7f7;
+            }
+
+            .backgraund-input-foco{
+                background-color: #eeee2c;
+            }
+
+            .backgraund-input-erro{
+                background-color: #cc5a5a;
+            }
+
+            .backgraund-input-sucesso{
+                background-color: #68c568;
+            }
+        </style>
+
+        <script>
+            function inputFoco(){
+                console.log('Foco')
+                document.getElementById('nome_usuario').className='backgraund-input-foco';
+            }
+
+            function inputBlur(){
+                console.log('Blur')
+                document.getElementById('nome_usuario').className='backgraund-input-original';
+            }
+
+            function inputKeyUp(){
+                var nome_usuario = document.getElementById('nome_usuario')
+                console.log(nome_usuario.value.length)
+
+                if(nome_usuario.value.length<3){
+                    nome_usuario.className = 'backgraund-input-erro'
+                }else{
+                    nome_usuario.className = 'backgraund-input-sucesso'
+
+                }
+            }
+        </script>
+
+
+    </head>
+    <body>
+        <h1>Desafio-05</h1>
+        <hr>
+
+        <input type="text" placeholder="Digite seu nome" id="nome_usuario" class="backgraund-input-original" onfocus="inputFoco()" onblur="inputBlur()" onkeyup="inputKeyUp()">
+
+    </body>
+</html>

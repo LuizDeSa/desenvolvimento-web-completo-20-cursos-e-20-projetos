@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Array básico</title>
+    </head>
+    <body>
+        <h1>Array básico</h1>
+        <hr>
+
+        <script>
+            var lista_frutas = Array()
+            // OU
+            // var lista_frutas = []
+
+            // lista_frutas[0] = 'Pera'
+            lista_frutas[1] = true
+            lista_frutas[2] = 'Maça'
+            lista_frutas['x'] = 'Morango'
+            lista_frutas[4] = 'Uva'
+
+            console.log(lista_frutas)
+
+            // lista_frutas = Array('Banana', 'Maça', 'Ameixa', 'Uva')
+            // Ou
+
+            lista_frutas = ['Banana', 'Maça', 'Ameixa', 'Uva']
+            
+            console.log(lista_frutas)
+
+            // diferença entre lenght Array
+
+            // o lenght pode não representar o valor real do item, como neste caso, em que o leght é 9 sendo que so foram declarados 4
+            lista_frutas = []
+            lista_frutas[5] = true
+            lista_frutas[6] = 'Maça'
+            lista_frutas[7] = 'Morango'
+            lista_frutas[8] = 'Uva'
+
+            console.log(lista_frutas)
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alinhamento de Texto</title>
+    <link href="../../css/bootstrap5/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style-comentarios.css">
+    <link rel="stylesheet" href="../css/complementar-bootstrap5.css">
+  </head>
+  <body style="margin-bottom: 200px; padding: 16px;">
+    <h1>Alinhamento de Texto</h1>
+    <div class="comentario">
+    </div>
+    
+
+   <!-- Parágrafo justificado -->
+   <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.</p>
+
+    <br>
+    <br>
+
+    <!-- 
+        Alinhamento responsivo - text-<tela>-<alinhamento>
+            tela: sm, md, lg, xl
+            alinhamento: left, center, right
+     -->
+    <p class="text-sm-end">tela &gt;= 576px</p><!--Small-->
+    <p class="text-md-end">tela &gt;=  768px</p><!--Medium-->
+    <p class="text-lg-end">tela &gt;= 992px</p><!--Large-->
+    <p class="text-xl-end">tela &gt;= 1200px</p><!--Extra Large-->
+
+    <br>
+    <br>
+
+    <!-- Elemento Block para inline -->
+    <h1 class="d-inline bg-success">Lorem ipsum dolor</h1>
+    <p class="d-inline bg-danger">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <br>
+    <br>
+
+    <!-- Elemento Inline para Block -->
+    <span class="d-block">Lorem ipsum dolor</span>
+    <span class="d-block">Lorem ipsum dolor 2</span>
+
+    <br>
+    <br>
+
+    <!-- Elemento Inline-Block -->
+    <div class="bg-warning">
+      <h3 class="bg-success d-inline-block">Lorem ipsum</h3>
+      <h3 class="bg-success d-inline-block" style="margin-top: 50px; width: 400px;">Lorem ipsum dolor</h3>
+    </div>
+
+    <script src="../../css/bootstrap5/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

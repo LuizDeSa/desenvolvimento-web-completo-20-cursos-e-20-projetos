@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>App Orçamento Pessoal</title>
+        <link rel="stylesheet" href="../../../css/bootstrap5/css/bootstrap.css">
+        <link rel="stylesheet" href="../../../css/bootstrap5/bootstrap-icons-1.10.5/font/bootstrap-icons.css">
+        <link rel="icon" href="logo.png">
+        <script src="app.js"></script>
+    </head>
+    <body onload="atualizarTipo()">
+        <header class="mb-5 pb-5">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-success px-4">
+                <div class="container">
+                    <a class="navbar-brand" href="">
+                        <img src="logo.png" width="50" height="35" alt="Orçamento Pessoal">
+                    </a>
+
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-target">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <div class="collapse navbar-collapse" id="nav-target">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Cadastro</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="consulta.html">Consulta</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="consulta2.html">Consulta2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section>
+            <div class="container w-50">
+                <div class="row">
+                    <div class="col mb-5">
+                        <h1 class="display-4"> Registro de Nova Despesa</h1>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-lg-4">
+                        <input class="form-control" type="date" name="" id="data">
+                    </div>
+
+                    <div class="col-lg-5">
+                        <select class="form-select"  name="tipo" id="tipo">
+                            <option value="">Tipo</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <input type="text" class="form-control" placeholder="Valor" id="valor" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-9">
+                        <input type="text" class="form-control" placeholder="Descrição" id="descricao" />
+                    </div>
+                    
+                    <div class="col-lg-3 d-flex justify-content-end">
+                        <button type="button" class="btn btn-success btn-lg fs-6 w-50" onclick="cadastarDespesa()">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modalRegistaDespesa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div id="div-modal-titulo">
+                        <h1 class="modal-title fs-5" id="modal-titulo">Erro na gravação</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modal-conteudo">
+                    Existem campos obrigatórios que não foram preenchidos
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-bs-dismiss="modal" id="modal-btn">Voltar e Corrigir</button>
+                        <!-- <button type="button" class="btn btn-success">Save changes</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../../Bootstrap/bootstrap5/js/bootstrap.bundle.min.js"></script>
+        <script>
+
+           
+            
+        </script>
+    </body>
+</html>

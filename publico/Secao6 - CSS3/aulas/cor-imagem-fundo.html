@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cor e Imagem de Fundo</title>
+        <style type="text/css">
+            h1{
+                background-image: url('../imagens/tjto.jpg');
+                background-repeat: no-repeat; /*Controla a repetição do background*/
+                 /*fixed - fixa a imagem mesmo que a página role
+                   scroll - */
+                background-attachment: fixed;  /**/ 
+                /*pode aceitar um valor ou dois valores -> 1° -> define a posição na horizontal: left, center, right
+                                                           2° -> define a posição na vertical: top, center, bottom*/
+                background-position: center top; /* Define a posição desse elemento dentro do espaço do elemento pai*/
+            }
+
+            .fundo{
+                background-color: blue; /* trabalha com o fundo do elemento*/
+                color: white; /*cor do texto*/
+            }
+
+            .fundo2{
+                background: blue;
+            }
+
+            .fundo3{
+                background: blue url('../imagens/yoshi.png') no-repeat fixed center bottom;
+            }
+
+        </style>
+    </head>
+    <body class="fundo3">
+
+        <a href="../index.html">Página Inicial</a>
+
+        <h1 class="fundo">Conteúdo de título1</h1>
+        
+        <h1 class="fundo2">Conteúdo de título2</h1>
+
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+
+    </body>
+</html>

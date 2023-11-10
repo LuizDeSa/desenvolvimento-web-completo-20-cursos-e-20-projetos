@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Elementos Flutuantes</title>
+
+        <style>
+            .conteudo-zero{
+                background: red;
+                border: 1px solid blue;
+                width: 200px;
+                height: 200px;
+            }
+
+            .conteudo{
+                background: blue;
+                border: 1px solid red;
+                width: 200px;
+                height: 200px;
+                float: left; /*Com float, os elementos vão concorrer pelo espaço*/
+                margin: 10px;
+            }
+            /* mostra a propriedade float */
+            /* Quando uma classe tem floar e outra não, a que tem pode sobrepor a que não tem*/
+            /* Quando duas classes diferentes tem float, elas não se sobrepõe */
+            .conteudo1{
+                background: gray;
+                border: 1px solid red;
+                width: 150px;
+                height: 150px;
+                /* float - left none right */
+                /* Faz com que saia do fluxo padrão de conteúdo podendo sobrepor o outro elemento */
+                float: left; /*faz com que os elementos flutuam a esquerda ou a direita*/
+            }
+
+            /* Testando a altura dos componentes */
+            .conteudo2{
+                background: red;
+                border: 1px solid gray;
+                width: 200px;
+                height: 250px;
+                float: left; /*Com float, os elementos vão concorrer pelo espaço*/
+                margin: 10px;
+            }
+
+            .clear{
+                /* left none right both(ambos)*/
+                clear: both;
+            }
+
+            #principal{
+                /* border: 5px solid red; */
+                background: green;
+            }
+
+        </style>
+    </head>
+    <body>
+        <a href="../index.html">Página Inicial</a>
+        
+        <hr>
+
+        <!-- <div class="conteudo-zero">
+            Conteúdo 0
+        </div> -->
+        
+        <div class="conteudo2">
+            Conteúdo 1
+        </div>
+
+        <div id="principal">
+            <div class="conteudo">
+                Conteúdo 1
+            </div>
+            
+            <div class="conteudo">
+                Conteúdo 2
+            </div>
+
+            <div class="conteudo">
+                Conteúdo 3
+            </div>
+
+            <!-- <div class="conteudo-zero">
+                Conteúdo 4
+            </div> -->
+
+            <!-- <p class="clear"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id dui interdum, 
+            iaculis erat eget, fermentum lorem. Cras at odio ligula. Quisque ut lacus eu 
+            enim condimentum pellentesque. Vestibulum ante ipsum primis in faucibus orci 
+            luctus et ultrices posuere cubilia curae; Integer commodo feugiat sagittis.
+            Morbi orci arcu, efficitur a magna eu, vulputate egestas nibh. Nullam in 
+            pharetra sapien, ut tincidunt augue. Maecenas et congue elit. Cras volutpat 
+            felis sed sodales pulvinar. Donec efficitur egestas purus et luctus. Sed lectus 
+            orci, vulputate vitae ultricies id, rhoncus nec est. Vestibulum mattis maximus 
+            dolor, vitae vestibulum elit tristique nec. 
+            </p> -->
+
+            <!-- Os conteúdos flutuantes não fazem a caixa que eles ocupam expandir até que eles caibam dentro --> 
+            <!-- Tem que colocar essa div para fazer com que div pai abarque todos os elementos finhls quando se usa elementos flutuantes -->
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

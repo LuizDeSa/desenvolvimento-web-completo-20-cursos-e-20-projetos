@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>OO :: Objeto Literal</title>
+    </head>
+    <body>
+        <h1>OO :: Objeto Literal Modificaçãoes de valores</h1>
+        <hr>
+
+        <script>
+            let pessoa = {
+                nome: 'Luiz',
+                idade: 26
+            }    
+
+            console.log(pessoa)
+
+            pessoa.nome = 'Fernanda'
+            pessoa.idade = 38
+
+            console.log(pessoa)
+
+
+            
+            pessoa.sexo = 'Feminino'
+            console.log(pessoa)
+
+            pessoa.dizerOi = () => console.log(`Olá ${pessoa.nome}, tudo bem`)
+
+            pessoa.dizerOi()
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery - Recuperando e manipulando Conteúdo</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(()=>{
+               console.log($('#div1').html())
+               console.log($('#div2').html())
+
+            //    $('#div1').html('Este é o novo conteúdo')
+            // $('#div1').html('<strong>Este é o novo conteúdo</strong>')
+            // $('#div1').html('<strong style="color:red;">Este é o novo conteúdo</strong>')
+            // $('#div1').text('<strong style="color:red;">Este é o novo conteúdo</strong>')
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Recuperando e manipulando Conteúdo</h1>
+
+        <div id="div1" style="border: solid 1px #000; width: 150px; height: 150px;">
+            Div 1
+            <a href="#">teste</a>
+            <p>Esse é outro teste</p>
+            <div>Outro teste</div>
+        </div>
+
+        <div id="div2" style="border: solid 1px #000; width: 150px; height: 150px;">
+            Div 2
+        </div>
+
+    </body>
+    
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formularios</title>
+        <link rel="stylesheet" href="../css/css-formulario.css">
+    </head>
+    <body>
+        <h2>Estilizando formulário</h2>
+
+        <form>
+            <!--  serve para agrupar informações do mesmo tipo -->
+            <fieldset>
+                <legend>Detalhes de contato</legend>
+
+                <!-- forma 1 -->
+                <!-- <div>
+                    <label>Nome:
+                        <input id="nome" name="nome" type="text">
+                    </label>
+                </div> -->
+                
+                <!-- forma 2 -->
+                <div>
+                    <label for="nome">Nome: </label>
+                    <input id="nome" name="nome" type="text">
+                </div>
+
+                <div>
+                    <label for="e-mail">E-mail: </label>
+                    <input id="e-mail" name="e-mail" type="email">
+                </div>
+
+                <div>
+                    <label for="url">URL: </label>
+                    <input id="url" name="url" type="url">
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Comentários</legend>
+                <div>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea name="mensagem" id="mensagem"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Lembrar de mim</legend>
+
+                <div>
+                    <label>
+                        <input class="radio" type="radio" name="lembrar" id="sim">Sim
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input class="radio" type="radio" name="lembrar" id="nao">Não
+                    </label>
+                </div>
+            </fieldset>
+
+        </form>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery - Recuperando e manipulando atributos</title>
+        <!-- <script src="jquery-3.7.1.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+                console.log($('img').attr('src'))
+                console.log($('img').attr('border'))
+                $('img').attr('src', 'img/esfera_2.png')//attr permite selecionar qualquer atributo de qualquer tag
+
+                console.log($('div').attr('style'))
+                $('div').attr('style', 'background-color: blue; width:200px; height: 200px')
+
+                console.log($('input').attr('value'))
+                $('input').attr('value', 'Continuo sendo um input')
+                $('input').attr('type', 'password')
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Recuperando e manipulando atributos</h1>
+
+        <img src="img/esfera_1.png" border="5" alt="">
+        <!-- <img src="img/esfera_2.png" alt=""> -->
+
+        <div style="background-color: red; width:100px; height: 100px;"></div>
+
+        <input type="text" value="Eu sou um input">
+    </body>
+    
+</html>

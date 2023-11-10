@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Var-Let</title>
+        
+    </head>
+    <body>
+        <h1>Var-Let</h1>
+        <hr>
+        <script>
+            // 3 escopos: global, função e bloco
+
+            // Utilizando o var
+            // Variaveis do escopo global podem ser usadas em funções, e bloco dentro de funções e no proprio escopo global
+            // Variaveis do escopo função podem ser usadas em funções, e bloco dentro de funções e MAS NÃO NO escopo global
+            // Variaveis do escopo bloco podem ser usadas dentro do bloco e tbm no escopo que engloba o bloco. EX: se o bloco ta no escopo global, a variaveil criada dentro dele 
+            // Estará diponivel tbm no bloco global, se o bloco esta no escopa da função, ele estara disponivel dentro do escopo da função
+
+            document.write('<h2>Var</h2>')
+
+
+            //global
+            var serie1 = 'Serie1'
+
+            //função
+            function x(){
+                var serie2 = 'Serie2'
+
+                document.write('<p> Função: '+serie1+'</p>')
+                document.write('<p> Função: '+serie2+'</p>')
+                // escopo bloco dentro de função
+                if(true){
+                    document.write('<p> Bloco - Função: '+serie1+'</p>')
+                    document.write('<p> Bloco - Função: '+serie2+'</p>')
+                }
+            }
+            x()
+
+            // escopo bloco
+            if(true){
+                document.write('<p>Bloco: '+serie1+'</p>')
+                // document.write('<p>Bloco: '+serie2+'</p>')
+            }
+
+
+            if(true){
+                var serie3 = 'Serie 3'
+                document.write('<p>Bloco: '+serie3+'</p>')
+
+            }
+
+            function y(){
+                document.write('<p> Função Y: '+serie3+'</p>')
+            }
+
+            y()
+            document.write('<p> Globa: '+serie3+'</p>')
+
+            document.write('<br><hr><br><h2>Let</h2>')
+            document.write('<p> Let: Preserva o escpo da função</p>')
+
+            if(true){
+                let serie4 = 'serie4'
+                document.write('<p> Bloco: '+serie4+'</p>')
+
+            }
+            try{
+                document.write('<p> Globa: '+serie4+'</p>')
+            }catch(e){
+                console.log(e)
+            }
+
+            document.write('<br><hr><br><h2>Verificando</h2>')
+
+            var serie5 = 'Serie 5'
+
+            {
+                var serie5 = 'Serie-5'
+                document.write('<p> Bloco: '+serie5+'</p>')                
+            }
+
+            document.write('<p> global: '+serie5+'</p>')
+            
+            
+            var serie6 = 'Serie 6'
+
+            {
+                let  serie6 = 'Serie-6'
+                document.write('<p> Bloco: '+serie6+'</p>')                
+            }
+
+            document.write('<p> global: '+serie6+'</p>')
+
+            // try{//Vai da conflito
+            //     let serie7 = 'Serie 7'
+
+            //     {
+            //         var  serie7 = 'Serie-7'
+            //         document.write('<p> Bloco: '+serie7+'</p>')                
+            //     }
+
+            //     document.write('<p> global: '+serie7+'</p>')
+            // }catch(e){
+            //     console.log(e)
+            // }
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM</title>
+        <script>
+            function distribuirCaracters(){
+                var caracter = document.getElementById('caracter').value
+
+                document.getElementById('caracter').value = ''
+
+                console.log(caracter)
+
+                caracter.trim()
+
+                switch(caracter){
+                    case '0':
+                    case '1':
+                    case '2':
+                    case '3':
+                    case '4':
+                    case '5':
+                    case '6':
+                    case '7':
+                    case '8':
+                    case '9':
+                        document.getElementById('numero').value += caracter
+                        break;
+                    default:
+                        document.getElementById('letra').value += caracter
+
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>DOM</h1>
+        <hr>
+
+        <input onkeyup="distribuirCaracters()" type="text" placeholder="Digite um caracter aqui" id="caracter">
+
+        <hr>
+
+        <span>Letras</span>
+        <input type="text" id="letra" disabled="disabled">
+    
+
+        <span>Número</span>
+        <input type="text" id="numero" disabled="disabled">
+
+        <script>
+            
+        </script>
+    </body>
+</html>

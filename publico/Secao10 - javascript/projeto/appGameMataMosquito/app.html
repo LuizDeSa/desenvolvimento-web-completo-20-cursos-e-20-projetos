@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>App Game Mata Mosquito</title>
+        <link rel="stylesheet" href="estilo.css">
+        <script src="app.js"></script>
+    </head>
+    <body onresize="ajustaTamanhoPalcoJogo()">
+        <!-- <img src="imagens/mosquito.png" alt="" class="mosquito1"> -->
+
+        <div class="painel">
+            <div class="vidas">
+                <img id="v1" src="imagens/coracao_cheio.png" alt="">
+                <img id="v2" src="imagens/coracao_cheio.png" alt="">
+                <img id="v3" src="imagens/coracao_cheio.png" alt="">
+            </div>
+
+            <div class="cronometro"> Tempo Restante: <span id="cronometro"></span></div>
+        </div>
+
+        <script>
+            // posicaoRandomica()
+            document.getElementById('cronometro').innerHTML = tempo
+            var criaMosquito = setInterval(posicaoRandomica, criaMosquitoTempo)
+        </script>
+    </body>
+</html>

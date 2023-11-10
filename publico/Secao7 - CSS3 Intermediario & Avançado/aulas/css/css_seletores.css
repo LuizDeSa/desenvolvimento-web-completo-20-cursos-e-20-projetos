@@ -1,0 +1,75 @@
+/* Seletor Universal -> seleciona todos os elementos da pagina */
+/*
+*{
+    border: 1px solid red;
+}
+*/
+/* Seletores de texto -> Seleciona elementos pelo tipo Ex: h1, h2, h3, p, ...*/
+/*
+h1{
+    color: green;
+}
+*/
+
+
+
+/* Seletor de classe - Seleciona um elemento cujo
+atributo class tem o valor especificado depois do ponto */
+/* Seleciona qualquer elemento cujo atributo class tem o valor “verde”*/
+/* Aplica a cor verde em qualquer paragrafo */
+
+/* .verde{
+    color: green;
+} */
+
+
+/* Seleciona somente elemento <p> cujo atributo class tem o valor “verde” */
+/* aplica a cor verde apenas em paragrafos */
+p.verde{
+    color: green;
+}
+
+/* Seeletor de id -  Seleciona um elemento cujo atributo id tem o valor especificado*/
+#cabecalho{
+    border: 1px solid blue;
+}
+
+/* Seletor de filho: Seleciona um elemento que é filho direto de outro */
+/* Seleciona quaisquer elementos <a> que são filhos de um elemento <li> */
+li>a {
+    color: red;
+    text-decoration: none;
+}
+
+/* Seletor de descendente
+**** Seleciona um elemento que é descendente de outro elemento 
+**** especificado (e não apenas filho direto desse elemento)
+*/
+
+/* Seleciona quaisquer elementos <a> que residem dentro de um 
+elemento <p>, mesmo e houver outros elementos aninhados entre eles */
+
+p a {
+    color: green;
+    text-decoration: none;
+}
+
+
+/* IRMÃO VEM DEPOIS*/
+/* Seletor de imãos adjacentes - Seleciona um elemento que é o irmão próximo de outro
+*/
+
+/* Seleciona o primeiro elemento <p> depois de qualquer elemento <h1> */
+/* h1+p {
+    color: blue;
+} */
+
+
+/* Seletor de irmão geral - Seleciona um elemento que é um irmão de 
+outro, embora ele não precise ser o elemento diretamente precedente*/
+
+/* Se houvesse dois elementos <p> que fossem irmãos de um elemento 
+<h1>, essa regra se aplicaria ao dois */
+h1~p {
+    color: blue;
+}

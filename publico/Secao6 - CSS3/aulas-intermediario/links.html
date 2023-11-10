@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formatando links</title>
+        <style>
+            /* forma mais simples */
+            a{
+                /* color: orange; */
+                padding: 5px 10px;
+                text-decoration: none;
+            }
+
+            /* É importante manter a ordem de formatação */
+            /* Formatando estafo do link */
+            /* Links nunca visitados */
+            a:link, a:visited{
+                color: #b9c941;
+            }
+
+            /* links visitados */
+            /* a:visited{
+                color: #c0c0c0;
+            } */
+
+            /* Quando passa o mouse */
+            a:hover{
+                color: #fff;
+                background: #6d790f;
+            }
+
+            /* links ativos, quando clicados */
+            a:active{
+                color: #e4f371;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <a href="../index.html">Página Inicial</a>
+        <hr>
+        <a href="https://www.google.com/">Google</a> | 
+
+        <a href="https://www.tecmundo.com.br/">Tec Mundo</a> | 
+
+        <a href="https://www.teste.com.br/">Tec Mundo</a> | 
+
+        <a href="https://www.strava.com/dashboard">Strava</a>
+
+
+    </body>
+</html>

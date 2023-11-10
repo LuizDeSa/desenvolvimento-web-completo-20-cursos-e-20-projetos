@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery - Eventos Extras</title>
+        <style>
+            #div1, #div2{
+                width: 80px;
+                height: 80px;
+                border: solid 1px #000;
+                margin-top: 5px;
+            }
+
+            .emDestaque{
+                background-color: red;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(()=>{
+                
+                $('#btn2').on('click', ()=>{
+                    alert('BTN 2 clicado')
+                })
+
+                $('#btn1').on('click', ()=>{
+                    $('#btn2').trigger('click')//aciona evento programatico
+                })
+
+                    
+                $('#div1').on('mouseenter', e => {
+                    $(e.target).addClass('emDestaque')
+                })
+
+                $('#div1').on('mouseleave', e => {
+                    $(e.target).removeClass('emDestaque')
+                })
+
+                $('#div2').hover(//sobreposição do elemento
+                    e=>{ $(e.target).addClass('emDestaque')}, 
+                    e=>{ $(e.target).removeClass('emDestaque')}
+                )
+
+                // ou
+
+                // $('#div2').hover(//sobreposição do elemento
+                //     e => $(e.target).toggleClass('emDestaque')
+                // )
+
+                $('#btn3').on('click', ()=>{
+                    $('#div1').toggleClass('emDestaque')//verifica se tem a classe, se tiver remove, se não tiver adiciona
+                })
+            })
+           
+
+        </script>
+    </head>
+    <body>
+        <h1>Evento :: Eventos Extras</h1>
+
+        <button id="btn1" type="button">BTN 1</button>
+        <button id="btn2" type="button">BTN 2</button>
+
+        <hr>
+
+        <div id="div1">mouseenter mouseleave</div>
+        <button id="btn3" type="button">Toogle</button>
+        
+        <div id="div2">hover</div>
+        
+    </body>
+    
+</html>

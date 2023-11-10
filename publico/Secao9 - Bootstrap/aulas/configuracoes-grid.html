@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Configurações do grid</title>
+    <link href="../../css/bootstrap5/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style-comentarios.css">
+    <style>
+        .marcador {
+            background: #fe9d9d;
+            border: 1px solid #f84646;
+        }
+
+        .marcador-container {
+            background: #5ff946;
+            border: 1px solid #36ae26;
+        }
+    </style>
+
+  </head>
+  <body style="margin-bottom: 200px; padding: 16px;">
+    <h1>Configurações do grid</h1>
+    <div class="comentario">
+        <p>O sistema de grid é definido dentro de uma classe "row", ou seja, são criados doze colunas dentro da classe row</p>
+    </div>
+    
+    <div class="marcador-container container">
+      
+        <h2>Largura fixa</h2>
+        <div class="row">
+            <div class="marcador col">
+                Area 1
+            </div>
+            <div class="marcador col">
+                Area 2
+            </div>
+            <div class="marcador col">
+                Area 3
+            </div>
+            <div class="marcador col">
+                Area 4
+            </div>
+        </div>
+  
+        <h2>Largura automática (auto-layout)</h2>
+        <div class="row">
+            <div class="marcador col">
+                Area 1
+            </div>
+            <div class="marcador col-4">
+                Area 2
+            </div>
+            <div class="marcador col-6">
+                Area 3
+            </div>
+        </div>
+
+
+        <h2>Largura igual empilhada</h2>
+        <div class="row">
+            <div class="marcador col-sm">
+                Area 1
+            </div>
+            <div class="marcador col-sm">
+                Area 2
+            </div>
+            <div class="marcador col-sm">
+                Area 3
+            </div>
+        </div>
+
+
+        <h2>Ordenando</h2>
+        <div class="row">
+            <div class="marcador col order-2">
+                Area 1
+            </div>
+            <div class="marcador col order-3">
+                Area 2
+            </div>
+            <div class="marcador col order-1">
+                Area 3
+            </div>
+        </div>
+  
+        <h2>offset</h2>
+        <div class="row">
+            <div class="marcador col-md-6 offset-md-3">
+                Login...
+            </div>
+        </div>
+  
+        <h2>offset múltiplos alinhamentos</h2>
+        <div class="row">
+            <div class="marcador col-md-3 offset-md-2">Conteudo 1</div>
+            <div class="marcador col-md-3 offset-md-3">Conteudo 2</div>
+        </div>
+  
+        <h2>Aninhamento</h2>
+        <div class="row">
+            <div class="col-md-6" style="border: 1px solid blue;">
+                col-md-6
+                <div class="row">
+                    <div class="marcador col-md-6">
+                        col-md-6
+                    </div>
+                    <div class="marcador col-md-6">
+                        col-md-6
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+
+    <script src="../../css/bootstrap5/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>

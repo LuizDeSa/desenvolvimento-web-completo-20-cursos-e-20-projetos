@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>OO :: Objeto Literal</title>
+    </head>
+    <body>
+        <h1>OO :: Objeto Literal Objetos unicos</h1>
+        <hr>
+
+        <script>
+            let assinatura = {
+                idCliente: 1000,
+                descricao: 'Acesso a internet',
+                status(){
+                    console.log('Ativo')
+                }
+            }
+
+            console.log(assinatura)
+
+            // Estou passando a referência da variavél assinatura para y e não fazendo uma copia
+            let y = assinatura
+
+            console.log(y.descricao)
+            console.log(assinatura.descricao)
+
+            y.descricao = 'Internet + tv + telefone'
+
+            console.log(y.descricao)
+            console.log(assinatura.descricao)
+
+        </script>
+    </body>
+</html>

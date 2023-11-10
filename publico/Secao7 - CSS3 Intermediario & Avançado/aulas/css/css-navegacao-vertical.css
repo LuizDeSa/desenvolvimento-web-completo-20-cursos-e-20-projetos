@@ -1,0 +1,45 @@
+ul#lista-atividade{
+    /* border: 1px solid red; */
+    /* remove o caracter especial que identifica a lista*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Seletor descendente */
+#lista-atividade li{
+    padding: 5px 20px;
+    /* border: 1px solid blue; */
+    background: url(../paginas/imagens/seta.png) no-repeat left center;
+}
+
+
+/* ******************************************************************** */
+
+ul#navegacao-vertical{
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul a{
+    /* border: 1px solid green; */
+    text-decoration: none;
+    text-indent: 40px;
+    /* altura da linha */
+    line-height: 40px;
+    color: #000;
+    display: block;
+    width: 200px;
+    height: 40px;
+    background: #f7b600 url(../paginas/imagens/menu.png) no-repeat left bottom;
+}
+
+ul a:hover{
+    background-position: right bottom;
+    background-color: #f99200;
+    color: #fff;
+
+}
+

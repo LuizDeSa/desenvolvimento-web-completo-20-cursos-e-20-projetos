@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>IF - ELSE</title>
+        <link rel="stylesheet" href="../../css/style-comentarios.css">
+        <script>
+    
+            // isso é uma string
+            var nota = prompt('Informe a nota do alunos')
+            var faltas = prompt('Informe a quantidade de faltas do aluno')
+            var media = 7
+            var faltas_max = 15
+
+
+            if(nota >= media && faltas<=faltas_max ){
+                console.log('Aprovado')
+            }else{
+                console.log('Reprovado')
+            }
+
+            // Operador ternario
+            // <condição> ? <verdadeiro> : <falso>
+            var resultado = (nota >= media && faltas<=faltas_max ) ? 'Aprovado' : 'Reprovado'
+            console.log('Resultado: '+resultado)
+
+
+        </script>        
+
+    </head>
+    <body>
+        <h1>If else</h1>
+        <div class="comentario">
+            <h2>Operadores de comparação</h2>
+            <ul>
+                <li>Igual (==) => Verifica se os valores comparados são iguais</li>
+                <li>Idêntico (===) => Verifica se os valores comparados são iguais e do mesmo tipo</li>
+                <li>Diferente (!=) => Verifica se os valores comparados são diferentes</li>
+                <li>Idêntico (!==) => Verifica se os valores comparados são diferentes e de tipos diferentes</li>
+                <li>Menor (<)</li>
+                <li>Maior (>)</li>
+                <li>Menor igual (<=)</li>
+                <li>Maior igual(>=)</li>
+
+            </ul>
+            <hr>
+            <h2>Operadores de comparação</h2>
+            <ul>
+                <li>E(&&)</li>
+                <li>OU(||)</li>
+                <li>!(negação)</li>
+            </ul>
+        </div>
+    </body>
+</html>

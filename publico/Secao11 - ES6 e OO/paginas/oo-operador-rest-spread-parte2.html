@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>OO :: Operador Rest - Spreed</title>
+    </head>
+    <body>
+        <h1>OO :: Operador Rest - Spreed</h1>
+        <hr>
+
+        <script>
+            // Rest
+            function soma(...param){
+                let resultado = 0
+                param.forEach( v => resultado += v)
+                return resultado
+            }
+            console.log(soma(3, 8, 5, 7, -9 , 7))
+
+            function multiplicacao(m, ...p){
+                resultado = 0
+                console.log(m)
+                console.log(p)
+
+                p.forEach(v => resultado += m*v)
+                return resultado
+            }
+
+            console.log(multiplicacao(5, 12, 7, 3, 49))
+
+        </script>
+    </body>
+</html>

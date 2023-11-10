@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>OO :: Funções Construtoras</title>
+    </head>
+    <body>
+        <h1>OO :: Funções Construtoras</h1>
+        <hr>
+
+        <script>
+            // Formas de criar objetos
+            // 1° forma -- classe
+            class Carro{
+
+                #velocidadeAtual = 0
+
+                constructor(cor, modelo, velocidadeMaxima){
+                    this.cor = cor
+                    this.modelo = modelo
+                    this.velocidadeMaxima = velocidadeMaxima
+                }
+
+                acelerar(){
+                    console.log('Acelerar')
+                }
+
+                set velocidadeAtual(velocidade){
+                    if(velocidade>=0 && velocidade<=this.velocidadeMaxima){
+                        this.#velocidadeAtual = velocidade
+                    }
+                }
+
+                get velocidadeAtual(){
+                    return this.#velocidadeAtual
+                }
+            }
+
+            carro1 = new Carro('vermelho', 'gol', 165)
+            carro1.velocidadeAtual = 40
+            console.log(carro1)
+
+
+            // Forma 2 -- Objeto Literal
+            let cor = 'branco'
+            let modelo = 'gol'
+            let velocidadeAtual = 0
+            let velocidadeMaxima = 165
+
+            carro2 = {
+                cor,
+                modelo,
+                velocidadeAtual,
+                velocidadeMaxima,
+                acelerar(){
+                    console.log('Acelerar')
+                },
+                setVelocidadeAtual(velocidade){
+                    if(velocidade>=0 && velocidade<=this.velocidadeMaxima){
+                        this.velocidadeAtual = velocidade
+                    }
+                },
+
+                getVelocidadeAtual(){
+                    return this.velocidadeAtual
+                }
+            }
+
+            console.log(carro2)
+            carro2.setVelocidadeAtual(50)
+            console.log(carro2.getVelocidadeAtual())
+            console.log(carro2)
+
+            // Forma 3 -- função construtoras
+
+            let Carro3 = function(cor='', modelo='', velocidadeAtual=0, velocidadeMaxima=0){
+                this.cor = cor
+                this.modelo = modelo
+                this.velocidadeAtual = velocidadeAtual
+                this.velocidadeMaxima = velocidadeMaxima
+
+                this.acelerar = function(){
+                    this.setVelocidadeAtual(this.getVelocidadeAtual()+10)
+                }
+
+                this.setVelocidadeAtual = function(velocidade){
+                    if(velocidade>=0 && velocidade<=this.velocidadeMaxima){
+                        this.velocidadeAtual = velocidade
+                    }
+                }
+
+                this.getVelocidadeAtual = function(){
+                    return this.velocidadeAtual
+                }
+
+            }
+
+            let carro3 = new Carro3('Preto', 'celta', 0, 165)
+
+            console.log(carro3)
+            carro3.acelerar()
+            carro3.acelerar()
+            carro3.acelerar()
+            console.log(carro3)
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posicionamentos (static, relative, absolute, e fixed)</title>
+    <link rel="stylesheet" href="../../css/style-comentarios.css">
+    <style>
+
+        body{
+            background: #007fc7;
+        }
+
+        /* h1{ */
+            /* position: static; */
+        /* } */
+
+        p{
+            /* position: static; */
+            width: 300px;
+        }
+
+        #container{
+            background: #fff;
+            width: 800px;
+            /* Essa é uma forma de centralizar */
+            margin: 10px auto;
+            padding: 10px;
+
+            /* ALterar aqui para testes */
+            position: relative;
+
+        }
+
+        .fixed{
+            border: 1px solid red;
+            background: #f2f2f2;
+            margin: 0px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+        }
+
+        .absolute{
+            border: 1px solid red;
+            background: #f2f2f2;
+            position: absolute;
+            top: 80px;
+            right: 20px;
+        }
+
+        .relative{
+            border: 1px solid red;
+            position: relative;
+
+            /* top right bottom left */
+            /* Desloca em relação a posição INCIAL padrão do componente */
+            /* Movimenta Xpx em relação à parate mais ao topo do componente */
+            /* top: 20px; */
+            /* top: -20px; */
+            /* Movimenta Xpx em relação à parte mais á direita do componente */
+            /* O ELEMENTO É EMPURRADO Xpx apartir da sua direira */
+            /* right: 20px; */
+            /* Movimenta Xpx em relação à parte mais á esquerda do componente */
+            left: 80px;
+
+            bottom: -20px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <a href="../index.html">Página inicial</a>
+    <hr>
+    <div id="container">
+
+        <h1>Posicionamentos</h1>
+        <p>
+            P1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <!-- <p class="relative"> -->
+        <p class="absolute">
+            <strong>Absolute</strong> P2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <p class="fixed">
+            <strong>Fixed</strong> P3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <p class="relative">
+            P4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <p>
+            P5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <p>
+            P6 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <p>
+            P3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <p>
+            P3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <p>
+            P3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <p>
+            P3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+    </div>
+
+    <div class="comentario">
+        <h1>Posicionamentos</h1>
+        <p><strong>static</strong> -> O fluxo padrão é elemento do tipo block um abaixo do outro</p>
+        <p><strong>relative</strong> -> Ao utilizar é necessário utilizar outras propriedades de deslocamentos: top, right, bottom, left </p>
+        <p>
+            <strong>absolute</strong> -> O elemento sai do fluxo normal do documento e os outros elementos se comportam coomo se esse elemento não existisse.
+            <strong>Ele será sempre posiscionado baseado no container que ele está dentro, desde que este container tenha posicionamento diferente do padrão(static)</strong>
+        </p>
+        <p><strong>Fixed</strong> -> O elemento fica fixo em relação a tela do navegador </p>
+    </div>
+</body>
+</html>

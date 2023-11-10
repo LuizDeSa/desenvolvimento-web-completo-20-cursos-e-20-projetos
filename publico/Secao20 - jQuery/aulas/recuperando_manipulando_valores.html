@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery - Recuperando e manipulando valores</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(()=>{
+                // $('#nome').val()
+                // $('#origem').val()
+                // $('#nome').val('Luiz')
+                // $('#origem').val('4')
+
+                // $('.sexo')
+                // $('.sexo:checked')
+                // $('.sexo:checked').val()
+
+                // $('.interesse')
+                // $('.interesse:checked')
+
+                /*
+                $.each($('.interesse:checked'), (indice, valor)=>{
+                    console.log(indice, valor.value)
+                })
+                */
+
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Recuperando e manipulando valores</h1>
+        <p>Nome:</p>
+        <input type="text" id="nome">
+        <br>
+        
+        <p>Onde você nos encontrou?</p>
+        <select id="origem">
+            <option value="1">Google</option>
+            <option value="2">Facebook</option>
+            <option value="3">Rádio</option>
+            <option value="4">outros</option>
+        </select>
+
+        <br><br>
+
+        <p>Sexo:</p>
+        <input type="radio" name="sexo" class="sexo" value="f">Feminino<br>
+        <input type="radio" name="sexo" class="sexo" value="m">Masculino<br>
+        <br>
+
+        <p>Interesse:</p>
+        <input type="checkbox" name="interesse" class="interesse" value="php">PHP<br>
+        <input type="checkbox" name="interesse" class="interesse" value="js">JavaScript<br>
+        <input type="checkbox" name="interesse" class="interesse" value="angular">Angular<br>
+        <input type="checkbox" name="interesse" class="interesse" value="nodejs">NodeJs<br>
+
+       
+    </body>
+    
+</html>

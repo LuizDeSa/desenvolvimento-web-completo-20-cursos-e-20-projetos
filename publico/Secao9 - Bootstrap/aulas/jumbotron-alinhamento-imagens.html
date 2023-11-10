@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jumbotron e alinhamento de imagens</title>
+    <link href="../../css/bootstrap5/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style-comentarios.css">
+  </head>
+  <body style="margin-bottom: 200px; padding: 16px;">
+    <h1>Jumbotron e alinhamento de imagens</h1>
+    <div class="comentario">
+    </div>
+    
+
+    <h3 class="border-bottom">Jumbotron</h3>
+    <div class="p-5 mb-4 bg-body-secondary rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5">Música para todos.</h1>
+            <p class="fs-4 lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+            <hr>
+            <p class="fs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a class="btn btn-primary btn-lg" href="">Leia mais</a>
+        </div>
+    </div>
+
+
+    
+    <h3 class="border-bottom">Estrutura para imagens</h3>
+    <div class="d-flex align-items-start">
+      <img class="me-3" src="../imagens/img03.png" style="width: 80px; height: 80px;">
+      <div class="flex-fill">
+        <h5>Título do conteúdo</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+      </div>
+    </div>
+
+    <br><br>
+
+    <h3 class="border-bottom">Alinhamentos: align-self-ALINHAMENTO (start, center, end) </h3>
+    <div class="d-flex align-items-start">
+        <img class="me-3 align-self-center" src="../imagens/img03.png" style="width: 70px; height: 70px;">
+        <div class="flex-fill">
+          <h5>Título do conteúdo</h5>
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+        </div>
+      </div>
+
+      <br><br><br>
+    <h3 class="border-bottom">Listas com imagens</h3>
+    <ul class="list-unstyled">
+      
+      <li class="d-flex align-items-start border-bottom pb-3">
+        <img class="me-3 align-self-center" src="../imagens/img03.png" style="width: 70px; height: 70px;">
+        <div class="flex-fill">
+          <h5>Título do conteúdo</h5>
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl.</p>
+          </div>
+      </li>
+
+      <li class="d-flex align-items-start border-bottom py-3">
+        <img class="me-3 align-self-center" src="../imagens/img03.png" style="width: 70px; height: 70px;">
+        <div class="flex-fill">
+          <h5>Título do conteúdo</h5>
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl.</p>
+          </div>
+      </li>
+
+      <li class="d-flex align-items-start border-bottom py-3">
+        <img class="me-3 align-self-center" src="../imagens/img03.png" style="width: 70px; height: 70px;">
+        <div class="flex-fill">
+          <h5>Título do conteúdo</h5>
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl.</p>
+          </div>
+      </li>
+      
+
+    </ul>
+
+
+    <script src="../../css/bootstrap5/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

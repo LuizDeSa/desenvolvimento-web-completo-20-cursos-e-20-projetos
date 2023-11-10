@@ -1,0 +1,80 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Classes e ids</title>
+
+        <style type="text/css">
+            /* Seletor - é mais geral  
+                classe -> é menos geral
+                Id é fortemente especifico -> pode usar um por página
+            */
+
+            /* Seletores */
+            /*  p-> seletor
+                color -> propriedade 
+                red -> valor*/
+            p{
+                color: red;
+            }
+
+            h1{
+                color: green;
+            }
+
+            /* Classes */
+            .azul{/* O ponto define que é uma classe*/
+                color: blue;
+            }
+
+            /* Ids */
+            #cabecalho{
+                background: green;
+            }
+
+            /* Ordem de prioridade na execução-> Id>Classes>Seletores */
+            /* Da pra usar id em mais de um elemento.
+                Mas o recomendado nesse caso é utilizar  CLASSES*/
+        </style>
+
+    </head>
+    <body>
+
+        <div>
+            <div id="cabecalho">
+                <img src="imagens/logo.png" alt="Logo">
+                <ul>
+                    <li><a href="../index.html">Página Inicial</a> <br></li>
+                    <li>Quem Somos</li>
+                    <li>Contatos</li>
+                </ul>
+            </div>
+        </div>
+
+        Id -> identifica de forma unica um elemento da Página
+        Classe -> Identifica uma serie de elementos com a mesma classificação
+
+        <h1 class="azul">Estilo CSS (cascading style sheets)</h1>
+
+        <p class="azul">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+
+
+        <h1>Estilo CSS (cascading style sheets)</h1>
+
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+
+    </body>
+ </html>

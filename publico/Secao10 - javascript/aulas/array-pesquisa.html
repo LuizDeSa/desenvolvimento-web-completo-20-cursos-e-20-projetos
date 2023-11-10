@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Array Pesquisa</title>
+    </head>
+    <body>
+        <h1>Array Pesquisa</h1>
+        <hr>
+
+        <script>
+            var lista_frutas = Array()
+
+            lista_frutas[0] = 'Banana'
+            lista_frutas[1] = 'Maça'
+            lista_frutas[2] = 'Morango'
+            lista_frutas[3] = 'Uva'
+
+            // é case sensitive
+            console.log(lista_frutas.indexOf('Morango'))
+            
+            console.log(lista_frutas.indexOf('Pera'))
+
+            // 
+            // var fruta = 'Uva'
+            var fruta = 'uva'
+            // var fruta = 'Uva'
+
+            if(lista_frutas.indexOf(fruta)===-1){
+                console.log('Elemento não existe')
+            }else{
+                console.log('Elemento existe e está na posição: '+lista_frutas.indexOf(fruta))
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>OO :: Prototype</title>
+    </head>
+    <body>
+        <h1>OO :: Prototype</h1>
+        <hr>
+
+        <script>
+            // Objeto Literal
+            let a1 = {
+                cor: 'branco',
+                modelo: 'Airbus a380',
+                levantarVoo: function() {console.log('levantar voo')}
+            }
+
+            // Função Construtora
+            let AviaoF = function(cor, modelo){
+                this.cor = cor
+                this.modelo = modelo
+                this.levantarVoo = function() {console.log('levantar voo')}
+            }
+
+            // classe
+            class AviaoC{
+                constructor(cor, modelo){
+                    this.cor = cor
+                    this.modelo = modelo
+                }
+                
+                levantarVoo() {console.log('levantar voo')}
+            }
+
+            console.log(a1)
+            
+            a2 = new AviaoF('branco', 'aibus a320 NEO')
+            console.log(a2)
+
+            a3 = new AviaoC('azul', 'aibus a320')
+            console.log(a3)
+
+        </script>
+    </body>
+</html>

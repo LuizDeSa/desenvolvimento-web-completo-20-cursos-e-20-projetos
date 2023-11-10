@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery - On Off</title>
+        <style>
+            
+            .desfocado{
+                background-color: white;
+            }
+
+            .focado{
+                background-color: green;
+            }
+
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(()=>{
+                // Gera um problema
+                // $('input').on('focus', e => {
+                //     $(e.target).removeClass('desfocado')
+                //     $(e.target).addClass('focado')
+                // })
+
+                // $('input').on('blur', e => {
+                //     $(e.target).removeClass('focado')
+                //     $(e.target).addClass('desfocado')
+                // })
+
+                // $('body').append('<br><br> <input type="text" class="desfocado">')
+
+                // adiciona o evento focus de todos os inputs filhos do body
+                $('body').on('focus', 'input', e => {
+                    $(e.target).removeClass('desfocado')
+                    $(e.target).addClass('focado')
+                })
+
+                $('body').on('blur', 'input', e => {
+                    $(e.target).removeClass('focado')
+                    $(e.target).addClass('desfocado')
+                })
+
+                $('body').append('<br><br> <input type="text" class="desfocado">')
+
+                // remover
+                // $('body').off('blur', 'input')
+            })
+           
+
+        </script>
+    </head>
+    <body>
+        <h1>Evento :: On Off</h1>
+
+        <input type="text" class="desfocado">
+        
+    </body>
+    
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Flexbox-Container</title>
+        <link rel="stylesheet" href="../../css/style-comentarios.css">
+
+        <style>
+            #conteudo{
+                background: #dcdcdc;
+                /* width: 230px; */
+                height: 600px;
+                /* É aplicado no conatainer / Agora temos no interior desse container flex-iten*/
+                display: flex;
+
+                /* flex-direction: row; */
+
+                /* Quebra de layout */
+                /* flex-wrap: nowrap; */
+
+                /* organiza os itens ocupando o espaço na horizontal */
+                /* justify-content: space-around; */
+
+                /* organiza os itens ocupando o espaço na vertical */
+                /* align-items: flex-start; */
+            }
+
+            .item{
+                /* width: 200px; */
+                height: 100px;
+                margin: 10px;
+                background: white;
+                border: 1px solid gray;
+
+                /* Define a proporção de espaço ocupado por um item*/
+                flex-grow: 0;
+
+                /* Define a capacidade de redução de tamanho do item */
+                flex-shrink: 1;
+
+                /* Indica o tamanho inicial do flex item antes da distribuição do espaço restante */
+                flex-basis: 200px;
+            }
+
+            .item1{
+                /* flex-grow: 1; */
+                flex-shrink: 1;
+
+            }
+
+            .item2{
+                flex-grow: 2;
+                /* flex-shrink: 2; */
+            }
+
+            .item3{
+                /* flex-grow: 2; */
+                flex-shrink: 5;
+            }
+
+            .ordem1{
+                order: 1;
+            }
+
+            .ordem2{
+                order: 2;
+            }
+
+            .ordem3{
+                order: 3;
+            }
+
+            .ordem4{
+                order: 4;
+            }
+
+            .ordem{
+                order: -1;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Flexbox</h1>
+
+        <div class="comentario">
+            <p><a href="https://www.w3schools.com/cssref/css3_pr_flex-direction.php">flex-direction</a></p>
+            <h2>Links da aula</h2>
+            <p><a href="https://caniuse.com/?search=flexbox">Compatibilidade flexbox</a></p>
+            <p><a href="https://github.com/jonathantneal/flexibility">Compatibilidade IE</a></p>
+            <p class="importante"><a href="https://autoprefixer.github.io/">Autoprefixer CSS online</a></p>
+        </div>
+
+        <!-- container -->
+        <div id="conteudo">
+            <!-- flex itens -->
+            <div class="item item1">01</div>
+            <div class="item ">02</div>
+            <div class="item ">03</div>
+            <div class="item">04</div>
+            <!-- <div class="item">05</div> -->
+        </div>
+
+    </body>
+</html>

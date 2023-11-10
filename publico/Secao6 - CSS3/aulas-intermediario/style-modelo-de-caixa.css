@@ -1,0 +1,50 @@
+/* Modelo de Caixa */
+.conteudo{
+    border: 1px solid red;
+    width: 150px;
+
+    /*padding - Espaçamento interno*/
+    /*Quando nós colocamos um padding, ele faz parte do tamanho final da caixa do elemento html*/
+    
+    /* padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px; */
+
+    /*top right bottom left*/
+    padding: 40px 30px 20px 10px; 
+
+    /* top e bottom - right e left */
+    /* padding: 20px 10px; */
+    
+    /* padding: 20px; */
+
+
+    /* margin - expaçamento externo */
+    /* margim top e bottom se sobre põe*/
+    /* margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px; */
+
+    /*top right bottom left*/ 
+    /* margin: 20px 15px 10px 5px; */
+
+    /* top e bottom - right e left */
+    /* margin: 20px 10px; */
+
+    margin: 20px;
+
+}
+
+.noticia{
+    background: #f9f9f9; 
+    padding: 10px;
+    width: 300px;
+    border: 1px solid gray;
+}
+
+h2{
+    /* border: 1px solid red; */
+    margin: 0px;
+}

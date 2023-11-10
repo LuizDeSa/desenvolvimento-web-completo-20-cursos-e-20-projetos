@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Funções de Datas</title>
+        
+    </head>
+    <body>
+        <h1>Funções de Datas</h1>
+        <hr>
+
+        <script>
+            // tem que ser instanciada
+            var data = new Date()
+
+            document.write('<p> Dia: ' + data.getDate() + '<p>')
+            document.write('<p> Mês: ' + (data.getMonth()+1) + '<p>')
+            document.write('<p> Ano: ' + data.getFullYear() + '<p>')
+            
+
+            // Aula 2
+
+            // add dias
+            document.write('<br><br><p>' + data.toString() + '<p>')
+            data.setDate(data.getDate()+61)
+            document.write('<p>' + data.toString() + '<p>')
+            data.setDate(data.getDate()-1)
+            document.write('<p>' + data.toString() + '<p>')
+            
+            // add mês
+            data = new Date()    
+            document.write('<br><br><p>' + data.toString() + '<p>')
+            data.setMonth(data.getMonth()+4)
+            document.write('<p>' + data.toString() + '<p>')
+            data.setMonth(data.getMonth()-1)
+            document.write('<p>' + data.toString() + '<p>')
+
+            // add ano
+            data = new Date()    
+            document.write('<br><br><p>' + data.toString() + '<p>')
+            data.setFullYear(data.getFullYear()+4)
+            document.write('<p>' + data.toString() + '<p>')
+            data.setFullYear(data.getFullYear()-1)
+            document.write('<p>' + data.toString() + '<p>')
+
+            //Diferença entre datas
+            
+            var data1 = new Date(2022, 0, 12)
+
+            var data2 = new Date(2023, 4, 29)
+            document.write('<br><br><p>' + data1.toString() + '<p>')
+            document.write('<p>' + data2.toString() + '<p>')
+
+            // converter para algo que possa ser calculado.
+
+            // converte as dataas em milisgundos de 1° de janeiro de 1970 até a respectiva data
+            
+            document.write('<br><br><p>' + data1.getTime() + '<p>')
+            document.write('<p>' + data2.getTime() + '<p>')
+            
+            // encontrar os milisegundos entre as duas datas
+            var milisegundos_entre_duas_datas = Math.abs(data1.getTime() - data2.getTime() )
+            document.write('<p>' + milisegundos_entre_duas_datas + '<p>')
+            
+            var milisegundos_de_um_dia = 1*24*60*60*1000
+            document.write('<p> 1 dia tem: ' + milisegundos_de_um_dia + ' milisegundos<p>')
+            
+            dias_entre_duas_datas = Math.ceil(milisegundos_entre_duas_datas/milisegundos_de_um_dia)
+            document.write('<p> A diferença entre as datas em dias é: ' + dias_entre_duas_datas + ' dias <p>')
+            
+            
+
+            
+        </script>
+    </body>
+</html>

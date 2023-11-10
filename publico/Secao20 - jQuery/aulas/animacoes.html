@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery - Animações</title>
+        <style>
+            .div{
+                width: 80px;
+                height: 80px;
+                border: solid 1px #000;
+                background-color: #aaa;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(()=>{
+                let visualFinal = {
+                    'width':'160px',
+                    'height':'160px',
+                    'margin-left': '200px',
+                    'margin-top': '200px',
+                    'border-radius': '25px'  
+                }
+                $('button').on('click', ()=>{
+                    $('#div1').animate(//valores numericos
+                        visualFinal, 
+                    {
+                        duration: 3500,
+                        start: ()=>{console.log('animação iniciada')},
+                        complete: ()=>{
+                            $('#div2').animate(//valores numericos
+                                visualFinal, {duration:2000}
+                            )
+                        }
+                    })
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Animações</h1>
+
+        <button type="button">Iniciar Aninação</button>
+        <div id="div1" class="div"></div>
+        <div id="div2" class="div"></div>
+    </body>
+    
+</html>

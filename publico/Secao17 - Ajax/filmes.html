@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/bootstrap5/css/bootstrap.css" rel="stylesheet">
+        <title>Filmes</title>
+
+        <script src="xmltojson.js"></script>
+
+        <script>
+            function getFilmes(){
+                let xmlHttp = new XMLHttpRequest();
+                // xmlHttp.open('GET', 'http://localhost:8082/filmes.xml')
+                xmlHttp.open('GET', 'http://localhost:8080/Secao17%20-%20Ajax/filmes.xml')
+
+                xmlHttp.onreadystatechange = () => {
+                    if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+                        let XMLFilmes = xmlHttp.responseText
+                        
+                        // Converter em uma arvore de elementos
+                        let parser = new DOMParser()
+                        domFilmes = parser.parseFromString(XMLFilmes, 'text/xml')
+
+                        // console.log(domFilmes)
+
+                         // JSON FILMES
+                         jsonFilmes = xmlToJson(domFilmes)
+                        //  console.log(jsonFilmes)
+
+                        for (let i in jsonFilmes['filmes']['filme']){
+                            // console.log(jsonFilmes['filmes']['filme'][i])
+                            
+
+                            let titulo = jsonFilmes['filmes']['filme'][i]['titulo']['#text']
+                            let resumo = jsonFilmes['filmes']['filme'][i]['resumo']['#text']
+                            let genero = ''
+                            for(let g in jsonFilmes['filmes']['filme'][i]['genero']){
+                                if(genero){
+                                    genero += ', '
+                                }
+                                genero += jsonFilmes['filmes']['filme'][i]['genero'][g]['#text']
+                            }
+
+                            let elenco = ''
+                            for(let e in jsonFilmes['filmes']['filme'][i]['elenco']['ator']){
+                                if(elenco){
+                                    elenco += ', '
+                                }
+                                elenco += jsonFilmes['filmes']['filme'][i]['elenco']['ator'][e]['#text']
+                            }
+
+                            let dtLanamento = jsonFilmes['filmes']['filme'][i]['dataLancamento']['#text']
+                            let paisLanamento = jsonFilmes['filmes']['filme'][i]['dataLancamento']['@attributes']['pais']
+
+
+
+                            let divRow = document.createElement('div')
+                            divRow.className = 'row'
+
+                            let divCol = document.createElement('div')
+                            divCol.className = 'col'
+
+                            let divCard = document.createElement('div')
+                            divCard.className = 'card mb-3 me-4'
+                            divCard.style = 'max-width: 25rem;'
+
+                            let divCardHeader = document.createElement('div')
+                            divCardHeader.className = 'card-header text-bg-success'
+                            divCardHeader.innerHTML = '<p><strong>Título:</strong> '+ titulo +'</p>'
+
+                            let divCardBody = document.createElement('div')
+                            divCardBody.className = 'card-body'
+                            divCardBody.innerHTML = '<p><strong>Resumo:</strong> '+resumo+'</p>' +
+                                                    '<p><strong>Gênero:</strong> '+genero+'</p>' +
+                                                    '<p><strong>Elenco:</strong> '+elenco+'</p>' +
+                                                    '<p><strong>Data de lançamento:</strong> '+' '+paisLanamento+' '+dtLanamento+'</p>'
+
+
+                            divCard.appendChild(divCardHeader)
+                            divCard.appendChild(divCardBody)
+                            document.getElementById('conteudo').appendChild(divCard)
+                        }
+
+                    } else if(xmlHttp.readyState == 4 && xmlHttp.status == 404){
+                        console.log('Ocorreu um erro')
+                    }
+                }
+
+                xmlHttp.send()
+            }
+        </script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-light px-3">
+            <div class="container">
+                <div class="navbar-brand mb-0 h1">
+                    <h3 class="display-6">Catálogo de filmes</h3>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row mb-4 mt-4">
+                <div class="col">
+                    <button class="btn btn-success" type="button" onclick="getFilmes()">Listar Filmes</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <section>
+                <div class="row">
+                    <div class="col d-flex" id="conteudo">
+                    </div>
+                </div>
+            </section>
+
+            <!-- <div class="row">
+                <div class="col d-flex">
+                    <div class="card mb-3 me-4" style="max-width: 25rem;">
+                        <div class="card-header text-bg-success">
+                            <p><strong>Título:</strong> Título do filme</p>
+                        </div> 
+                        <div class="card-body">
+                            <p><strong>Resumo:</strong> Resumo do filme</p>
+                            <p><strong>Gênero:</strong> Gênero do filme</p>
+                            <p><strong>Elenco:</strong> Elenco do filme</p>
+                            <p><strong>Data de lançamento:</strong> Data de lançamento do filme</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3" style="max-width: 25rem;">
+                        <div class="card-header text-bg-success">
+                            <p><strong>Título:</strong> Título do filme</p>
+                        </div> 
+                        <div class="card-body">
+                            <p><strong>Resumo:</strong> Resumo do filme</p>
+                            <p><strong>Gênero:</strong> Gênero do filme</p>
+                            <p><strong>Elenco:</strong> Elenco do filme</p>
+                            <p><strong>Data de lançamento:</strong> Data de lançamento do filme</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+    </body>
+</html>

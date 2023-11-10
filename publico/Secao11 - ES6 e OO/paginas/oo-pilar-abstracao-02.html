@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>OO :: Pilar da abstração</title>
+        
+    </head>
+    <body>
+        <h1>OO :: Pilar da abstração 02</h1>
+        <hr>
+        <script>
+
+            // Procedural
+            // array de cadeiras
+            let cadeiras = Array()
+
+            cadeiras[0]=Array()
+            cadeiras[0]['qtd_pernas'] = 4
+            cadeiras[0]['giratoria'] = false
+            cadeiras[0]['cor'] = 'azul'
+
+            cadeiras[1]=Array()
+            cadeiras[1]['qtd_pernas'] = 1
+            cadeiras[1]['giratoria'] = true
+            cadeiras[1]['cor'] = 'vermelha'
+
+            function girarCadeira(indice){
+                if(cadeiras[indice]['giratoria']){
+                    console.log('Girou')
+                }else{
+                    console.log('Cadeira não é giratória')
+                }
+            }
+
+            function adicionarCadeira(qtd_pernas, giratoria, cor){
+                let cadeira = Array()
+
+                cadeira['qtd_pernas'] = qtd_pernas
+                cadeira['giratoria'] = giratoria
+                cadeira['cor'] = cor
+
+                cadeiras.push(cadeira)
+                
+            }
+
+            console.log(cadeiras)
+
+            girarCadeira(1)
+
+            adicionarCadeira(3, false, 'preta')
+            
+            console.log(cadeiras)
+
+            // Orientação a objetos
+            class Cadeira {
+
+                constructor(qtd_pernas, giratoria, cor){
+                    this.qtd_pernas = qtd_pernas
+                    this.giratoria = giratoria
+                    this.cor = cor
+                }
+
+                girarCadeira(){
+                    if(this.giratoria===true){
+                        console.log('Girou')
+                    }else{
+                        console.log('Cadeira não gira')
+                    }
+                }
+            }
+
+            let cadeiras2 = Array()
+
+            cadeiras2.push(new Cadeira(1, true, 'azul'))
+            cadeiras2.push(new Cadeira(4, false, 'verde'))
+
+            console.log(cadeiras2)
+
+        </script>
+    </body>
+</html>

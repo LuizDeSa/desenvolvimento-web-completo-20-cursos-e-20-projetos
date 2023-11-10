@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Funções Callback</title>
+        
+    </head>
+    <body>
+        <h1>Funções Callback</h1>
+        <hr>
+
+        <script>
+            
+
+            function exibirArtigo(id, callbackSucesso, callbackErro){
+
+                if(false){
+                    callbackSucesso('Título Sucesso', 'Texto Sucesso')
+                }else{
+                    callbackErro('Texto Erro')
+                }
+
+            }
+
+            var callbackSucesso = function(titulo, descricao){
+                document.write('<h2>'+titulo+'</h2>')
+                document.write('<p>'+descricao+'</p>')
+            }
+
+            var callbackErro = function(descricao){
+                document.write('<p><strong>Erro: </strong>'+descricao+'</p>')
+            }
+
+            exibirArtigo(1, callbackSucesso, callbackErro)
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos Formulario</title>
+        
+        <script>
+            
+        </script>
+
+    </head>
+    
+    <!-- é o  elemento que sofre os efeitos do redimensionamento-->
+    <body>
+        <h1>Eventos Formulario</h1>
+        <hr>
+        Nem todo elemento tem todos os eventos
+        <hr>
+
+        <input onfocus="console.log('recebeu o foco')" onblur="console.log('perdeu o foco')" onchange="console.log('foi modificado')" type="text">
+
+        <select onchange="console.log('Estado foi modificados')" name="" id="">
+            <option value="">-- Selecione --</option>
+            <option value="1">Primeria Opção</option>
+            <option value="2">Segunda Opção</option>
+        </select>
+    </body>
+</html>

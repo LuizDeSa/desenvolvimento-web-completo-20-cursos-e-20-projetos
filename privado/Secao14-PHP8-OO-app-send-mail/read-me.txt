@@ -1,0 +1,1 @@
+Arquivo Criado para implementar um requisito de segurança de modo a deixar esses arquivos secretos/ocultos.

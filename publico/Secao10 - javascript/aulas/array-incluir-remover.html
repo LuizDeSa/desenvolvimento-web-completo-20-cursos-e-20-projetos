@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Array</title>
+    </head>
+    <body>
+        <h1>Array inclusão e exclusão de elementos</h1>
+        <hr>
+
+        <script>
+
+            var lista_frutas = Array()
+            lista_frutas[0] = 'Banana'
+            lista_frutas[1] = 'Maça'
+
+            console.log(lista_frutas)
+
+            // Incluir no final do array
+            lista_frutas.push('Uva')
+            console.log(lista_frutas)
+
+            // incluir no inicio
+            lista_frutas.unshift('Pera')
+            console.log(lista_frutas)
+
+            // Excluir do final do array
+            lista_frutas.pop()
+            console.log(lista_frutas)
+
+            // Excluir no inicio
+            lista_frutas.shift()
+            console.log(lista_frutas)
+            
+
+            var lista_coisas = []
+
+            lista_coisas['frutas'] = []
+            lista_coisas['pessoas'] = []
+            console.log(lista_coisas)
+
+            lista_coisas['frutas'].push('Banana')
+
+            console.log(lista_coisas)
+
+           
+        </script>
+    </body>
+</html>

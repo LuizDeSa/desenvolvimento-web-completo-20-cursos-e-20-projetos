@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fontes Customizadas</title>
+        <style>
+            .comentarios{
+                background: #f1f1f1;
+                padding: 10px;
+            }
+
+            .comentarios a{
+                padding: 10px;
+                margin: 10px;
+                background: #b1b1b1;
+            }
+
+            /* define o nome da novz fonte */
+            @font-face {
+                font-family: "Ancient Medium";
+                src: url("fontes/Ancient-Medium.woff");
+            }
+
+            @font-face {
+                font-family: BringHeart;
+                src: url("fontes/BringHeart.woff");
+            }
+
+            @font-face {
+                font-family: MadelinaScript;
+                src: url("fontes/MadelinaScript.woff");
+            }
+
+            h1{
+                font-size: 6em;
+                font-family: "Ancient Medium";
+            }
+
+            h2{
+                font-size: 6em;
+                font-family: BringHeart;
+            }
+
+            h3{
+                font-size: 6em;
+                font-family: MadelinaScript;
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+        <h1>Fontes Customizadas - Ancient Medium</h1>
+        <h2>Fontes Customizadas - BringHeart</h2>
+        <h3>Fontes Customizadas - MadelinaScript</h3>
+
+
+        <div class="comentarios">
+            <p> Não coseguimos utilizar fontes no formato otf temos que convertar para o formato woff</p>
+
+            <h2>Recursos</h2>
+            <a href="https://www.dafont.com/pt/">Da font</a>
+            <a href="https://transfonter.org/">Transfonter</a>
+        </div>
+    </body>
+</html>

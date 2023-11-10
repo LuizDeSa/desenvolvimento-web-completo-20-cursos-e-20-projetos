@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio-04</title>
+    </head>
+    <body>
+        <h1>Desafio-04</h1>
+        <hr>
+
+        <script>
+            var num1 = prompt('Informe o primeiro número')
+            var num2 = prompt('Informe o segundo número')
+            var operacao = prompt('Informe a operacao(soma ou subtração)')
+
+            var soma = function(x, y){
+                return x+y
+            }
+
+            var subtracao = function(x, y){
+                return x-y
+            }
+
+            function calculo(x, y, operacao){
+                x = parseFloat(x)
+                y = parseFloat(y) 
+                return operacao(x, y)
+            }
+
+            var resultado
+
+            operacao = operacao.toLocaleLowerCase()
+
+            if(operacao=='soma'){
+                resultado = calculo(num1, num2, soma)
+            }else if(operacao=='subtração'){
+                resultado = calculo(num1, num2, subtracao)
+            }
+
+            document.write('<p> O Resultado é: '+resultado+'<p>')
+
+        </script>
+    </body>
+</html>

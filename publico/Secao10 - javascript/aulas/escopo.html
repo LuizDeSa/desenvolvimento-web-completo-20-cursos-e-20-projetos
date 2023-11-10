@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Escopo</title>
+        <script>
+            //3 escopos: global, função, e o bloco
+            /* 
+            ***** global -> todo o script
+            ***** função -> função
+            ***** bloco -> dentro de comandos -> if-else, for, switch, ......
+            */
+
+            //global
+            var serie1 = 'serie 1'
+
+            //bloco
+            if(true){
+                // o var eleva ao escopo global
+                var serie2 = 'serie 2'
+                console.log(serie1)
+            }
+
+            console.log(serie2)
+
+            //funcao
+            function x(){
+                //serie3 só pode ser acessada de dentro da função
+                var serie3 = 'serie 3'
+                console.log(serie1)
+                console.log(serie2)
+            }
+
+            x()
+            console.log(serie3)
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Escopo</h1>
+        <hr>
+    </body>
+</html>

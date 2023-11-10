@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bordas</title>
+        <style type="text/css">
+            #conteudo1{
+                border-color: green;
+                border-width: 15px;
+                border-style: outset;
+            }
+            #conteudo2{
+            /* espessura - tipo de bordar - cor da borda     */
+                border: 15px outset green;
+            
+            }
+            #conteudo3{
+                /* Sentido horário */
+                /* Se for dois valores -> 1° superior e inferior - 2° direita e esquerda*/
+                border-color: green red yellow blue;
+                border-width: 15px 11px 7px 4px;
+                border-style: outset dotted dashed solid;
+            }
+        </style>
+    </head>
+    <body> <!-- body ocupa o espaço do seu conteudo-->
+        <a href="../index.html">Home</a>
+        <div id="conteudo1">
+            Bordas <br>
+            Bordas <br>
+            Bordas <br>
+        </div>
+
+        <div id="conteudo2">
+            Bordas <br>
+            Bordas <br>
+            Bordas <br>
+        </div>
+        <div id="conteudo3">
+            Bordas <br>
+            Bordas <br>
+            Bordas <br>
+        </div>
+
+        Conteudo
+
+        <div style="border: 3px solid yellow;">
+            <a href="https://www.w3schools.com/css/css_border.asp">CSS Border Style</a>
+        </div>
+
+        <p style="border: 5px dotted red;">dotted - Defines a dotted border</p>
+        <p style="border: 5px dashed green;">dashed - Defines a dashed border</p>
+        <p style="border: 5px solid black;">solid - Defines a solid border</p>
+        <p style="border: 5px double blue;">double - Defines a double border</p>
+        <p style="border: 15px groove red;">groove - Defines a 3D grooved border. The effect depends on the border-color value</p>
+        <p style="border: 15px ridge red;">ridge - Defines a 3D ridged border. The effect depends on the border-color value</p>
+        <p style="border: 15px inset red;">inset - Defines a 3D inset border. The effect depends on the border-color value</p>
+        <p style="border: 15px outset red;">outset - Defines a 3D outset border. The effect depends on the border-color value</p>
+        <p style="border: 5px none red;">none - Defines no border.</p>
+        <p style="border: 55px hidden blue;">hidden - Defines a hidden border</p>
+
+        
+    </body>
+</html>

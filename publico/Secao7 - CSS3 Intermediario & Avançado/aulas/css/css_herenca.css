@@ -1,0 +1,39 @@
+/* body{ */
+    /* color: red; */
+    /* Não é herdado */
+    /* border: 1px solid blue; */
+/* } */
+
+/* No caso de dois seletores iguais, vale o ultimo. Exeção -> colocar o atributo na regra !impotant usar com cautela */
+/* p{
+    color: green;
+}
+
+p{
+    color: blue;
+} */
+
+/* Se um seletor mais especifico que outro for utilizdo, a regra mais especifica é que será aplicada */
+/* Terá prescedência sobre as regras atuais */
+
+* {
+    color: red;
+}
+
+p {
+    color: blue;
+}
+
+h2{ /** 3° **/
+    color: blue;
+}
+
+/* id é mais especifico que a classe, por isso ele preferencialmente aplicado */
+h2#amarelo{/** 1° **/
+    color: yellow;
+}
+
+h2.verde{/** 2° **/
+    color: green;
+}
+

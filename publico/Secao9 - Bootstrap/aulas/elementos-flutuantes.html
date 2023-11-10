@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Elementos flutuantes</title>
+    <link href="../../css/bootstrap5/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style-comentarios.css">
+  </head>
+  <body style="margin-bottom: 200px; padding: 16px;">
+    <h1>Elementos flutuantes</h1>
+    <div class="comentario">
+    </div>
+    
+    <!-- Elementos flutuantes -->
+    <div style="border: 1px solid red;" class="clearfix">
+      <div class="bg-success float-start">Float Left</div>
+      <div class="bg-warning float-end">Float Right</div>
+  </div>
+
+  <!-- Posicionamento fixo - top e bottom -->
+  <h1 class="fixed-bottom bg-success">Título do conteúdo fixo</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.</p>
+
+  <!-- 
+      Float responsivo - float-<tela>-<direcao>
+          tela: sm, md, lg, xl
+          alinhamento: left, right
+   -->
+  <div class="float-sm-end">tela &gt;= 576px * </div><!--Small-->
+  <div class="float-md-end">tela &gt;=  768px * </div><!--Medium-->
+  <div class="float-lg-end">tela &gt;= 992px * </div><!--Large-->
+  <div class="float-xl-end">tela &gt;= 1200px * </div><!--Extra Large-->
+
+  <br>
+  <br>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.</p>
+
+  <!-- Colar no topo (sticky) -->
+  <!-- Com sticky ele rola e quando a página rola ele cola no topo -->
+  <ul class="list-inline bg-warning sticky-top">
+    <li class="list-inline-item">Item 1</li>
+    <li class="list-inline-item">Item 2</li>
+    <li class="list-inline-item">Item 3</li>
+  </ul>
+
+  <h1>Título do conteúdo</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.
+  </p>
+
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.
+  </p>
+
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.
+  </p>
+
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.
+  </p>
+
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.
+  </p>
+
+
+  <script src="../../css/bootstrap5/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

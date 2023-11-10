@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Foreach</title>
+    </head>
+    <body>
+        <h1>Foreach</h1>
+        <hr>
+
+        <script>
+
+            // ****** So funciona para indices numéricos ******
+
+            var listaFuncionario = ['Viviane', 'Rosângela', 'Miguel', 'Lucas', 'Fernanada']
+            
+            console.log(listaFuncionario)
+
+            listaFuncionario.forEach(function(valor){
+                console.log(valor)
+            })
+
+            listaFuncionario.forEach(function(valor, indice){
+                console.log(valor, indice)
+            })
+
+            listaFuncionario.forEach(function(valor, indice, array){
+                console.log(indice + ':::'+valor)
+                console.log(array)
+                if(valor=='Lucas'){
+                    array[indice] = 'Carlos'
+                }
+            })
+
+            console.log(listaFuncionario)
+
+            // BOA PRATICA
+            var f = function(valor, indice){
+                console.log(valor, indice)
+            }
+
+            listaFuncionario.forEach(f)
+
+                        // ****** So funciona para indices numéricos ******
+
+            var listaCoisas = Array()
+
+            listaCoisas['a'] = 'Cadeira'
+            listaCoisas[false] = 'Mesa'
+            listaCoisas[3] = 'Lâmpada'
+            listaCoisas[27] = 'Notebook'
+            listaCoisas[-12] = 'Armário'
+            console.log('')
+            listaCoisas.forEach(f)
+
+        </script>
+    </body>
+</html>

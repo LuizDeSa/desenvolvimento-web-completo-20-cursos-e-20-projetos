@@ -1,0 +1,33 @@
+ul#navegacao-vertical{
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul a{
+    /* border: 1px solid green; */
+    text-decoration: none;
+    text-indent: 40px;
+    /* altura da linha */
+    line-height: 40px;
+    color: #000;
+    display: block;
+    width: 200px;
+    height: 40px;
+    background: #f7b600 url(../imagens/menu.png) no-repeat left bottom;
+}
+
+ul a:hover, .selecionado a{
+    background-position: right bottom;
+    background-color: #f99200;
+    color: #fff;
+
+}
+
+#sobre #navegacao-vertical .sobre a,
+#servicos #navegacao-vertical .servicos a{
+    background-position: right bottom;
+    background-color: #f99200;
+    color: #fff;
+}

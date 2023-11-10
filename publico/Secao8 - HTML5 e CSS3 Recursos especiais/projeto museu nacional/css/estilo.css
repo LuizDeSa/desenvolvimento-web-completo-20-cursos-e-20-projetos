@@ -1,0 +1,208 @@
+/* * {
+    border: 1px solid red;
+} */
+
+/* Estrututra do site */
+body{
+    background: #f4f2ec url(../imagens/fundo.png) repeat-x;
+    font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif
+}
+
+#container{
+    width: 1080px;
+    margin: 0 auto;
+}
+
+a:link, a:active, a:visited{
+    color: #af670a;
+    text-decoration: none;
+
+}
+
+a:hover{
+    color: #227115;
+}
+
+/* Logo 
+-----------------------------*/
+#logo a{
+    width: 248px;
+    height: 21;
+    text-indent: -9000px;
+    display: block;
+    background: url(../imagens/logo.png) no-repeat;
+}
+
+
+
+header{
+    /* border: 1px solid orangered; */
+    padding: 15px 0px;
+    height: 55px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+nav ul{
+    /* border: 1px solid orangered; */
+    list-style-type: none;
+    margin: 20px;
+    display: flex;
+}
+
+
+nav ul li a:link{
+    text-transform: uppercase;
+    display: block;
+    margin-right: 25px;
+    padding-bottom: 3px;
+}
+
+nav ul li a:hover{
+    border-bottom: 1px solid #535858;
+}
+
+/* Principal 
+-----------------------------------*/
+
+/* #principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+
+#conteudo{
+    width: 710px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+/* #principal{
+    background-color: #227115;
+} */
+
+#principal aside{
+    background-color: #ebe7dd;
+    width: 350px;
+    float: right;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+
+section#visita{
+    background: #cdc8b1;
+    padding: 10px 27px 27px 27px;
+    margin-top: 10px;
+}
+
+h4{
+    color: #86521a;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    margin-bottom: 0;
+}
+
+/* Formulários
+--------------------------------*/
+input{
+    height: 20px;
+    /* width: 80px; */
+    background: #fff;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+input.campo{
+    border: 1px solid #ada484;
+}
+
+input.botao{
+    background: #9b9271;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+fieldset{
+    border: none;
+}
+
+fieldset legend{
+    display: none;
+}
+
+section#galeria {
+    padding: 0 27px;
+}
+
+section#galeria a{
+    display: block;
+    background: url(../imagens/fundo-foto.png) no-repeat;
+    /* border: 1px solid red; */
+    float: left;
+    padding: 17px 15px 17px 15px;
+    margin: 10px 0 0 20px;
+}
+
+section#galeria img{
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+section#postagens{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section#postagens article{
+    width: 310px;
+}
+
+article#video{
+    margin-left: 25px;
+}
+
+article#mapa{
+    margin-left: 37px;
+}
+
+article#exposicoes{
+    margin: 15px 0 0 25px;
+}
+
+article#historia{
+    margin: 15px 0 0 37px;
+}
+
+section#postagens article h3{
+    text-transform: uppercase;
+    color: #227115;
+    font-size: 1.0em;
+    margin-bottom: 15px;
+}
+
+footer{
+    clear: both;
+    padding: 20px 0 30px 0;
+
+/*-------- não funciona pois a borda colapsou devido ao clear both  */
+/* ------- temos que ir até os elementos  que estão flutuando e adicionar a margem */
+    margin-top: 20px;
+    
+    text-align: center;
+    background: url(../imagens/fundo-rodape.png) no-repeat top center;
+
+    /* border: 1px solid red; */
+}
+
+footer>p a{
+    padding: 2px 10px;
+}

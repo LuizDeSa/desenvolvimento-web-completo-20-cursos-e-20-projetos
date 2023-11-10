@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery - Manipulando CSS</title>
+
+        <style>
+            .campo{
+                border: none;
+                padding: 10px;
+            }
+
+            .padrao{
+                background-color: #ddd;
+            }
+
+            .erro{
+                background-color: #ff1111;
+            }
+        </style>
+
+        <!-- <script src="jquery-3.7.1.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(()=>{
+                // style
+                // $('#topo').css('background-color', '#16AA61').css('margin', '0px').css('padding', '10px 20px 10px 20px')
+                // ou
+                $('#topo').css({'background-color': '#16AA61', 'margin': '0px', 'padding': '10px 20px 10px 20px'})
+                $('body').css('margin', '0px')
+                $('#topo h1').css({'color':'#fff', 'margin':'0px'})
+
+                // classes
+                $('input').addClass('campo')
+                $('input').addClass('padrao')
+                $('textarea').addClass('campo erro')
+
+                // verificar classe
+                $('input').hasClass('padrao')
+                $('input').hasClass('erro')
+
+                if($('textarea').hasClass('erro')){
+                    alert('temos um campo com erro')
+                }
+
+                $('textarea').removeClass('erro')
+                $('textarea').addClass('padrao')
+
+
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Manipulando CSS</h1>
+        <hr>
+
+        <div id="topo">
+			<h1>Barra de navegação da aplicação</h1>
+		</div>
+
+		<div>
+			<h3>Contato</h3>
+			<hr />
+
+			<p>Nome:</p>
+			<input type="text" />
+			<br />
+
+			<p>Email:</p>
+			<input type="text" />
+			<br />
+
+			<p>Mensagem:</p>
+			<textarea></textarea>
+			<br />
+
+			<button type="button">Enviar</button>
+		</div>
+
+       
+    </body>
+    
+</html>

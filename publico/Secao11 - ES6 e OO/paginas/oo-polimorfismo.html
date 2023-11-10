@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>OO :: Pilar do Polimorfismo</title>
+    </head>
+    <body>
+        <h1>OO :: Pilar do Polimorfismo</h1>
+        <hr>
+
+        <script>
+
+            class Aninal{
+                constructor(cor, tamanho, peso){
+                    this.cor = cor
+                    this.tamanho = tamanho
+                    this.peso = peso
+                }
+
+                dormir(){
+                    console.log('Dormindo')
+                }
+            }
+
+            class Passaro extends Aninal{
+                constructor(bico, cor, tamanho, peso){                    
+                    super(cor, tamanho, peso)
+                    this.bico = bico
+                }
+
+                voar(){
+                    console.log('Voando')
+                }               
+            }
+
+            class Papagaio extends Passaro{
+                constructor(sabeFalar, bico, cor, tamanho, peso){
+                    super(bico, cor, tamanho, peso)
+                    this.sabeFalar = sabeFalar
+                }
+
+                falar(){
+                    console.log('falar')
+                }
+            }
+
+            class Avestruz extends Passaro{
+                constructor(bico, cor, tamanho, peso){
+                    super(bico, cor, tamanho, peso)
+                }
+
+                voar(){
+                    console.log('Não Sabe Voar')
+                }
+
+                enterrarCabeca(){
+                    console.log('Enterrar cabeça')
+                }
+            }
+
+
+            let papagaio = new Papagaio(true, 'curto', 'verde', 'médio', '800g')
+            console.log(papagaio)
+            papagaio.voar()
+            papagaio.dormir()
+            papagaio.falar()
+
+            let avestuz = new Avestruz('chato', 'branco e preto', 'Grande', '60kg')
+            console.log(avestuz)
+            avestuz.voar()
+        </script>
+    </body>
+</html>

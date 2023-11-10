@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>App Orçamento Pessoal</title>
+        <link rel="stylesheet" href="../../../css/bootstrap5/css/bootstrap.css">
+        <link rel="stylesheet" href="../../../css/bootstrap5/bootstrap-icons-1.10.5/font/bootstrap-icons.css">
+        <link rel="icon" href="logo.png">
+        <script src="app.js"></script>
+    </head>
+    <body onload="carregarListaDespesa(); atualizarTipo()" >
+        <header class="mb-5 pb-5">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-success px-4">
+                <div class="container">
+                    <a class="navbar-brand" href="">
+                        <img src="logo.png" width="50" height="35" alt="Orçamento Pessoal">
+                    </a>
+
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-target">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <div class="collapse navbar-collapse" id="nav-target">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Cadastro</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Consulta</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="consulta2.html">Consulta2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col mb-5">
+                        <h1 class="display-4"> Consulta de despesas</h1>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    
+                    <div class="col-md-2">
+                        <select class="form-select"  name="ano" id="ano" onchange="pesquisarDespesa()">
+                            <option value="">Ano</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <select class="form-select" name="mes" id="mes" onchange="pesquisarDespesa()">
+                            <option value="">Mês</option>
+                            <option value="01">Janeiro</option>
+                            <option value="02">Fevereiro</option>
+                            <option value="03">Março</option>
+                            <option value="04">Abril</option>
+                            <option value="05">Maio</option>
+                            <option value="06">Junho</option>
+                            <option value="07">Julho</option>
+                            <option value="08">Agosto</option>
+                            <option value="09">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-2">
+                        <input class="form-control" type="text" name="dia" id="dia" placeholder="Dia">
+                    </div>
+
+                    <div class="col-md-5">
+                        <select class="form-select"  name="tipo" id="tipo" onchange="pesquisarDespesa()">
+                            <option value="">Tipo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" placeholder="Descrição" id="descricao" />
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Valor" id="valor" />
+                    </div>
+
+                    <div class="col-md-2 d-flex justify-content-end">
+                        <button onclick="pesquisarDespesa()" type="button" class="btn btn-success fs-6">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col">
+                        <table class="table" >
+                            <thead>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Tipo</th>
+                                    <th>Descrição</th>
+                                    <th>Valor</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="listaDespesas">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalApagarDespesa" tabindex="-1" aria-labelledby="modalApagarDespesa" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div id="div-modal-titulo" class="modal-header text-warning">
+                        <h1 class="modal-title fs-5" id="modal-titulo">Apagar despesa</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modal-conteudo">
+                        Tem certeza que deseja apagar essa despesa?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Não</button>
+                        <button id="confirmar-exclusao" class="btn btn-warning" data-bs-target="#modalDespesaApagada" data-bs-toggle="modal">Sim</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalDespesaApagada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div id="div-modal-titulo" class="modal-header text-success">
+                        <h1 class="modal-title fs-5" id="modal-titulo">Despesa apagada</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modal-conteudo">
+                        Despesa apagada com sucesso!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="window.location.reload()">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="../../../Bootstrap/bootstrap5/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

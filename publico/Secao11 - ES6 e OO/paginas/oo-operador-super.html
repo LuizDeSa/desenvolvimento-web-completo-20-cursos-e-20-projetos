@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>OO :: Pilar da Heranca</title>
+    </head>
+    <body>
+        <h1>OO :: Pilar da Heranca --- Operador Super</h1>
+        <hr>
+
+        <script>
+
+            class Aninal{
+                constructor(cor, tamanho, peso){
+                    this.cor = cor
+                    this.tamanho = tamanho
+                    this.peso = peso
+                }
+
+                dormir(){
+                    console.log('Dormindo')
+                }
+            }
+
+            class Passaro extends Aninal{
+                constructor(bico, cor, tamanho, peso){                    
+                    super(cor, tamanho, peso)
+                    this.bico = bico
+                }
+
+                voar(){
+                    console.log('Voando')
+                }               
+            }
+
+            class Papagaio extends Passaro{
+                constructor(sabeFalar, bico, cor, tamanho, peso){
+                    super(bico, cor, tamanho, peso)
+                    this.sabeFalar = sabeFalar
+                }
+
+                falar(){
+                    console.log('falar')
+                }
+            }
+
+
+            let papagaio = new Papagaio(true, 'curto', 'verde', 'médio', '800g')
+            console.log(papagaio)
+            papagaio.voar()
+            papagaio.dormir()
+            papagaio.falar()
+
+        </script>
+    </body>
+</html>

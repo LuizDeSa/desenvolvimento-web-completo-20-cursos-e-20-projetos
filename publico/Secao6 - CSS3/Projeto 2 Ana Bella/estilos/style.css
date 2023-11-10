@@ -1,0 +1,49 @@
+body{
+    background: #d2d2c1 url('../imagens/fundo.png');/*Foi definida a cor pois se a imagem não for carregada, a cor é*/
+    font-family: 16px Arial, Helvetica, sans-serif;
+}
+#principal{
+    width: 900px;
+    margin: 0px auto;
+}
+
+#menu{    
+    background-color: #c5c5b2;
+    padding: 18px; /*Espaçamento interno*/
+}
+
+
+#conteudo{
+    background-color: #e8e8d9;
+    padding: 10px ;
+}
+
+#rodape{
+    text-align: center;
+}
+
+#contato-contato{
+    padding: 15px;
+}
+
+.centralizar{
+    text-align: center;
+}
+
+.link-menu{
+    color: #4b566a;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.titulo{
+    color: #828271;
+    font-size: 1.2em;
+}
+
+.img-campanha{
+    border: 15px solid #c3c3ae;
+}
+
+

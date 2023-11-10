@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Percorrendo Array</title>
+    </head>
+    <body>
+        <h1>Percorrendo Array</h1>
+        <hr>
+
+
+        <script>
+            var lista_frutas = Array()
+
+            lista_frutas[0] = 'Banana'
+            lista_frutas[1] = 'Maça'
+            lista_frutas[2] = 'Morango'
+            lista_frutas[3] = 'Uva'
+
+            var i = 0
+
+            while(i<lista_frutas.length){
+                console.log(i)
+                document.write('<p>lista_frutas['+i+'] = '+lista_frutas[i]+'</p>')
+                i++
+            }
+
+            document.write('<br> <br> <br>')
+
+            for(i=0; i<lista_frutas.length; i++){
+                document.write('<p>lista_frutas['+i+'] = '+lista_frutas[i]+'</p>')
+            }
+
+        </script>
+        
+    </body>
+</html>

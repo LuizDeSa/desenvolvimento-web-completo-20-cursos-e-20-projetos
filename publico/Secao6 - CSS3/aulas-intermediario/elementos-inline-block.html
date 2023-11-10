@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Elementos inline, block e inline-block</title>
+        <link rel="stylesheet" href="../../css/style-comentarios.css">
+        <style>
+            .borda{
+                border: 1px solid red;
+                /* display: inline; */
+                /* display: block; */
+                display: inline-block; 
+            }
+        </style>
+    </head>
+    <body>
+        <a href="../index.html">Página Inicial</a> 
+        <div class="comentario">
+            <p>Elementos block -> Ocupa todo espaço (largura) da tela disponivel, fica um ebaixo do outro. Ex: h1, p, table....</p> 
+            <p>Elementos inline -> largura da caixa do elemento é de acordo com o seu conteúdo. Fica um elemento a frente do outro.Ex: a, span, img ...</p>
+            <p>Elementos inline-block -> largura definida pelo seu conteúdo mas fica um elemento abaixo do  outro <strong>quando não tem mais espaço na frente</strong>. Ex: utilizando a propriedade display</p>
+            <br>
+            <br>
+            <p>É possivel mudar essas caracteristicas por meio do css</p>
+        </div>
+<!--         
+        <h1 class="borda">Bloco 1</h1>
+        <h1 class="borda">Bloco 2</h1> -->
+
+        <span class="borda">
+            Inline 01
+            Inline 01 Lorem ipsum dolor sit amet
+            Inline 01 Lorem ipsum dolor sit amet
+            Inline 01 Lorem ipsum dolor sit amet
+            Inline 01 Lorem ipsum dolor sit amet
+            Inline 01 Lorem ipsum dolor sit amet
+            Inline 01 Lorem ipsum dolor sit amet
+        </span>
+        <span class="borda">Inline 02</span>
+
+
+    </body>
+</html>

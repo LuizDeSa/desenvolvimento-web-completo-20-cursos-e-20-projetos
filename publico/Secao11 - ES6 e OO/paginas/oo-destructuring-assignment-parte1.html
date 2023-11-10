@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Destructuring-Assignment</title>
+    </head>
+    <body>
+        <h1>Destructuring-Assignment parte 1</h1>
+        <hr>
+        <script>
+            let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+            let teste = frutas[0]
+            console.log(teste)
+
+            // destructuring
+            // let [a, b , , c] = frutas
+            // console.log(a, b, c)
+          
+            // Parametro defalt
+            let [a='Abacate', b , c, d, e = '-'] = frutas
+            console.log(a, b, c, d, e)
+
+            let cosisas = [['Abacaxi', 'Uva', 'Pera', 'Mamão'], ['Luiz', 'Carlos', 'João']]
+            let[, [, x]] = cosisas
+            let[ [, , y], []] = cosisas
+            console.log(cosisas)
+            console.log(x)
+            console.log(y)
+        </script>            
+    </body>
+</html>

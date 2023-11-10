@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Funções String</title>
+        
+    </head>
+    <body>
+        <h1>Funções String</h1>
+        <hr>
+
+        <script>
+            // internamente o interpretador vai converter em um objeto
+            document.write('<p>' + 'Luiz Alberto'.length + '<p>')
+            var nome = ' Luiz Alberto Pereira ';
+            
+            //traz o caracter dessa posição
+            document.write('<p>' + nome.charAt(7) + '<p>')
+
+            //traz a posição da primeira ocorrência do caracter
+            document.write('<p>' + nome.indexOf('e') + '<p>')
+
+            //troca uma parte da string por outra 
+            // nome.replace('Pereira', 'Sá')
+            document.write('<p>' + nome.replace('Pereira', 'Sá') + '<p>')
+
+            //traz parte da string apartir de uma posição incial
+            document.write('<p>' + nome.substr(7, 4) + '<p>')// apartir da posição 7 pegue 4 caracter
+
+
+            document.write('<p>' + nome.toLocaleLowerCase() + '<p>')
+            
+            document.write('<p>' + nome.toUpperCase() + '<p>')
+
+            // remove os espaços do inicio e fim da string
+            document.write('<p>-' + nome.trim() + '-<p>')
+
+            
+        </script>
+    </body>
+</html>

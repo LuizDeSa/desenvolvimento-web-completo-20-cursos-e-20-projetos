@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Parâmetros default</title>
+        
+    </head>
+    <body>
+        <h1>Parâmetros default</h1>
+        <hr>
+        <script>
+            function contarUmaHistoria(personagem = 'Gustavo', atividade = 'correr no parque', nome_dono='João'){
+                document.write(`<p>Era uma vez um cachorro chamado <strong> ${personagem} </strong>, ele adorava <strong>${atividade}</strong>, seu dono era o <strong>${nome_dono}</strong> e eles viveram felizes para sempre.</p>`)
+            }
+
+            contarUmaHistoria()
+            contarUmaHistoria('Diego')
+            contarUmaHistoria('Diego', 'enterrar ossos')
+            contarUmaHistoria('Diego', 'enterrar ossos', 'Pedro')
+            contarUmaHistoria(undefined, 'enterrar ossos', 'Pedro')
+            contarUmaHistoria('Diego', undefined, 'Pedro')
+            contarUmaHistoria(undefined, undefined, 'Pedro')
+        </script>
+    </body>
+</html>

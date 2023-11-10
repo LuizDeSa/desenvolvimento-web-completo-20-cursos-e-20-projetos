@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos Teclado</title>
+        <script>
+            function acao1(){
+                alert('Evento disparado')
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Eventos Teclado</h1>
+        <hr>
+        Nem todo elemento tem todos os eventos
+        <hr>
+
+        <input onkeydown="acao1()" type="text" placeholder="onkeydown">
+
+        <input onkeyup="acao1()" type="text" placeholder="onkeyup">
+
+        <!-- a diferença ta no control -->
+        <input onkeypress="acao1()" type="text" placeholder="onkeypress">
+
+        
+    </body>
+</html>

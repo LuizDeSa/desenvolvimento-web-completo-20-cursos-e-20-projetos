@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Array: exercicio</title>
+
+        <script>
+            var objetos = Array()
+
+            function adicionar(){
+                var campo = document.getElementById('nome_objeto')
+
+                if(campo.value===''){
+                    alert('Campo Vazio. Por favor, informe o nome do objeto')
+                }else{
+                    if(objetos.indexOf(campo.value)===-1){
+                        objetos.push(campo.value)
+                        campo.value=''
+                        console.log(objetos)
+                    }else{
+                        alert('Objeto já foi digitado')
+                    }
+                }
+
+            }
+
+            function ordenar(){
+                objetos.sort()
+                console.log(objetos)
+            }
+            
+        </script>
+
+    </head>
+    <body>
+        <h1>Array: exercicio</h1>
+        <hr>
+
+        <input id="nome_objeto" type="text">
+        <button onclick="adicionar()" type="button">Adicionar</button>
+        <button onclick="ordenar()" type="button">Ordenar</button>
+    </body>
+</html>

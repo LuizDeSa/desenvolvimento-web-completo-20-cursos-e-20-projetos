@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>OO :: Prototype</title>
+    </head>
+    <body>
+        <h1>OO :: Prototype</h1>
+        <hr>
+
+        <script>
+
+            Object.prototype.attr50 = 'z' //Cuidado
+            let animal = { attr1: 'a'}
+            let vertebrado = {  __proto__:animal, attr2: 'b'}
+            let ave = { __proto__: vertebrado, attr3: 'c'}
+
+            console.log(ave.attr50, ave.attr1, ave.attr2, ave.attr3)
+
+        </script>
+    </body>
+</html>

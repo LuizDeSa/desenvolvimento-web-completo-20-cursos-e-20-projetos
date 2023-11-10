@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tamplate String</title>
+        
+    </head>
+    <body>
+        <h1>Tamplate String</h1>
+        <hr>
+        <script>
+            let nome = 'Luiz'
+            //Não posso quebrar linha
+            console.log('Oi '+ nome + ', tudo bem?')
+
+
+            // Posso quebrar linha
+            console.log(
+            `Oi ${nome}, 
+            tudo bem?
+            `)
+
+            console.log(`7 + 8 = ${7+8}`)
+
+            function mult(a, b){
+                return a*b
+            }
+
+            console.log(`7 x 8 = ${mult(7, 8)}`)
+        </script>
+    </body>
+</html>

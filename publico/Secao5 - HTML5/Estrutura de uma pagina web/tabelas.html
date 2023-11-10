@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabelas</title>
+    </head>
+    <body>
+        <a href="index.html">Página Inicial</a>
+        <h1>Tabelas</h1>
+
+        <h2>Produtos</h2>
+
+        <!-- border="1" -> 1 pixel -->
+        <table border="2">
+           
+            <tr> <!-- table row-->
+                <th> <!--table head--> Código </th>
+                <th>Produto </th>
+                <th>Preço </th>
+            </tr>
+
+            <tr>
+                <td><!--table data-->001</td>
+                <td>Notebook</td>
+                <td>R$ 2.500,99</td>
+            </tr>
+
+            <tr>
+                <td>002</td>
+                <td>Tablet</td>
+                <td>R$ 999,99</td>
+            </tr>
+
+        </table>
+
+        <h1>Mais Sobre Tabelas</h1>
+
+        <!-- width="400" -> 400pixels || width="100%"-->
+        <table border="2" width="100%">
+           
+            <tr> <!-- table row-->
+                <th> <!--table head--> Código </th>
+                <th>Produto </th>
+                <th>Preço </th>
+            </tr>
+
+            <tr>
+                <td><!--table data-->001</td>
+                <td>Notebook</td>
+                <td>R$ 2.500,99</td>
+            </tr>
+
+            <tr>
+                <td>002</td>
+                <td>Tablet</td>
+                <td>R$ 999,99</td>
+            </tr>
+
+            <tr>
+                <td>002</td>
+                <td><a href="">Click</a></td>
+                <td>R$ 999,99</td>
+            </tr>
+
+            <!-- <tr>
+                <td>003</td>
+                <td><img src="imagens/Captura de tela de 2023-03-10 16-52-56.png" alt="switch" width="400"></td>
+                <td>R$ 999,99</td>
+            </tr> -->
+
+            <tr>
+                <td>Descontos</td>
+                <td colspan="2">cupom1 -R$ 10</td> <!--colspan -> extensão da coluna-->
+            </tr>
+            <tr>
+                <td rowspan="2">Descontos</td> <!-- Vai pra próxima tr-->
+                <td colspan="2">cupom2 -R$ 12</td> <!--colspan -> extensão da coluna-->
+            </tr>
+
+            <tr>
+                <!-- <td>Descontos</td> -->
+                <td colspan="2">cupom3 -R$ 15</td> <!--colspan -> extensão da coluna -->
+            </tr>
+
+            <tr>
+                <td>Total</td>
+                <td colspan="2">R$ 3.478,98</td>
+            </tr>
+        </table>
+
+
+    </body>
+</html>

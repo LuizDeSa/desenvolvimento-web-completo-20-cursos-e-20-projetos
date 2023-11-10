@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajax com jQuery</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="script.js"></script>
+
+    </head>
+    <body>
+        <div class="nav-side-menu">
+		    <div class="brand">SEU LOGO AQUI</div>
+		    <i class="bi bi-list toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+		  
+		        <div class="menu-list">
+		  
+		            <ul id="menu-content" class="menu-content collapse out">
+		                <li>
+		                  <a href="#"><i class="bi bi-speedometer sidebar-icon"></i>Dashboard</a>
+		                </li>
+
+						<li class="" data-bs-toggle="collapse" href="#ajuda" role="button" aria-expanded="false" aria-controls="ajuda">
+							<a href="#"><i class="bi bi-life-preserver sidebar-icon"></i>Ajuda <span class="arrow float-end"><i class="bi bi-chevron-down"></i></spam></a>
+						</li>
+
+						<ul class="sub-menu collapse" id="ajuda">
+							<li><a id="documentacao"><i class="bi bi-chevron-right"></i> Documentação</a></li>
+							<li><a id="suporte"><i class="bi bi-chevron-right"></i> Suporte</a></li>
+						</ul>
+		            </ul>
+		     </div>
+		</div>
+
+		<div class="main" id="pagina">
+			<div class="container">
+		    	<div class="row">
+		    		<div class="col">
+						<form action="">
+							<div class="row mb-3">
+								<label for="competencia" class="col-sm-9 col-form-label">Competência: </label>
+								<div class="col-sm-3">
+									<select class="form-control-plaintext">
+										<option value="">-- Selecione </option>
+										<option value="2018-08">Agosto / 2018</option>
+										<option value="2018-09">Setembro / 2018</option>
+										<option value="2018-10">Outubro / 2018</option>
+									</select>
+								</div>
+							</div>
+						</form>
+						
+						<hr>
+
+					</div>
+				</div>
+
+				<div class="row mb-3">
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">Número de vendas
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">?</h5>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">Total de vendas
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">?</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-3">
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">Clientes ativos
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">?</h5>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">Clientes ativos
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">?</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-3">
+					
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">Total de reclamações
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">?</h5>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">Total de elogios
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">?</h5>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">Total de sugestões
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">?</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-3">
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">Total de despesas
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">?</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+				
+		</div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</html>
